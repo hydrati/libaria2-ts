@@ -1,4 +1,4 @@
-import fs from "fs-extra";
+import fs from "fs";
 import execa from "execa";
 import { IAria2SpawnOptions, IAria2RpcOptions } from "./adapter";
 
@@ -25,7 +25,7 @@ export class Aria2Process {
     if (this.$options.aria2cPath == "") {
       throw "invalid aria2c path";
     }
-    if (!fs.pathExists(this.$options.aria2cPath)) {
+    if (!fs.existsSync(this.$options.aria2cPath)) {
       throw "not found aria2c at path";
     }
     await this.$createArgs();

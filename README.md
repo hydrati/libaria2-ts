@@ -1,4 +1,10 @@
 # [libaria2.ts](https://www.npmjs.com/package/libaria2-ts)
+![npm bundle size](https://img.shields.io/bundlephobia/min/libaria2-ts?label=size&style=for-the-badge)
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/im-oxygen/libaria2-ts?style=for-the-badge)
+![npm](https://img.shields.io/npm/dm/libaria2-ts?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/im-oxygen/libaria2-ts?style=for-the-badge)
+
+
 TypeScript (Node.js & ~~Browser~~(WIP) ) library for [aria2](https://aria2.github.io/).
 
 - [libaria2.ts](#libaria2ts)
