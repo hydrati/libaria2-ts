@@ -6,4 +6,6 @@ const aria2 = new Aria2({
   port: 6800,
 });
 
-await aria2.addUri("http://localhost:8800/test.zip");
+await aria2.addUri("http://localhost:8800/test.zip", {
+  header: "",
+});

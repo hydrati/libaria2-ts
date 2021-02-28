@@ -63,7 +63,8 @@
   "exclude": [
     "node_modules/**/*",
     "dist/**/*",
-    "etc/**/*"
+    "etc/**/*",
+    "src/spawn.ts"
   ],
   "include": [
     "src/**/*"

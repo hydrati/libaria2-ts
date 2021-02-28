@@ -13,7 +13,7 @@ export abstract class Aria2ClientBaseClass<T> {
   public abstract getSessionInfo(): Promise<IAria2ClientSessionInfo>;
   public abstract addUri(
     uris: string[] | string,
-    options?: IAria2ClientOptions,
+    options?: TAria2ClientInputOption,
     position?: number
   ): Promise<TAria2ClientGID>;
   public abstract addTorrent(
@@ -546,7 +546,12 @@ export type TAria2ClientInputOptionNames =
   | "save-session"
   | "server-stat-of";
 export type TAria2ClientInputOption = {
-  [index in TAria2ClientInputOptionNames]: boolean | string | number;
+  [index in TAria2ClientInputOptionNames]:
+    | boolean
+    | string
+    | number
+    | bigint
+    | undefined;
 };
 
 export type TAria2ClientGID = string;

@@ -46,10 +46,10 @@ isexe@^2.0.0:
   resolved "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
-libaria2-ts@^1.0.52:
-  version "1.0.52"
-  resolved "https://registry.npmjs.org/libaria2-ts/-/libaria2-ts-1.0.52.tgz#099a7f88102cf4c17f2bfd076931a476a79f6393"
-  integrity sha512-Ht1jPfCwGaLGSUhp3+UtBZNLXkPy901+ahjk5GBxn20y3elBkoXJPYnMHI3Afcj/AGUHpO0uQWdKHMF/TaUiDQ==
+libaria2-ts@^1.0.53:
+  version "1.0.53"
+  resolved "https://registry.npmjs.org/libaria2-ts/-/libaria2-ts-1.0.53.tgz#99822c2905b9bb7388c626410bbb4b08de6a0f21"
+  integrity sha512-xXPkYYFuQswvg3razcy98zQrjnHCKVCTvzl6KiUeZjadSzYXcV/Rkg3DxElqt/NeyOjwZ1fW2JnedZbx2yUW5Q==
   dependencies:
     execa "^5.0.0"
     uuid "^8.3.2"

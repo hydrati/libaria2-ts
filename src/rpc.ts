@@ -919,12 +919,12 @@ export namespace Aria2 {
        */
       public async addUri(
         uris: string[] | string,
-        options?: IAria2ClientOptions,
+        options?: TAria2ClientInputOption,
         position?: number
       ): Promise<TAria2ClientGID> {
         if (typeof uris == "string") uris = [uris];
         let args: unknown[] = [uris];
-        if (options != undefined) args.push(options);
+        if (options != undefined) args.push(fromTAria2ClientInputOption(options));
         if (options != undefined && position != undefined) args.push(options);
         else if (position != undefined) throw "Require `options`!";
         let resl = await this.$sendJson("aria2.addUri", ...args);

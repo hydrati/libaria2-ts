@@ -1,10 +1,10 @@
 {
-  "name": "tests",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "libaria2-ts": "^1.0.52"
-  }
+    "name": "tests",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "libaria2-ts": "^1.0.53"
+    }
 }
