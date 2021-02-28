@@ -9,14 +9,17 @@ import { WebSocketClient as Aria2 } from "libaria2-ts";
   });
 
   try {
-    await aria2.addUri(
+    let r = await aria2.addUri(
       "http://localhost:8800/test.zip",
       {
         header: "",
       },
       0
     );
-    await aria2.getGlobalStat();
+    console.log(r);
+    console.log(await aria2.getGlobalStat());
+    console.log((await aria2.tellActive())[0].downloadSpeed);
+    console.log(await aria2.getUris(r));
     await aria2.closeConnection();
   } catch (e) {
     console.error(e);
