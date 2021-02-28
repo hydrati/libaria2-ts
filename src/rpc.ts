@@ -55,14 +55,35 @@ export namespace Aria2 {
      * aria2 provides JSON-RPC over HTTP and XML-RPC over HTTP interfaces that offer basically the same functionality. aria2 also provides JSON-RPC over WebSocket. JSON-RPC over WebSocket uses the same method signatures and response format as JSON-RPC over HTTP, but additionally provides server-initiated notifications. See JSON-RPC over WebSocket section for more information.
      */
     export class Client implements Aria2ClientBaseClass<IAria2WSClientOptions> {
+      /** @ignore */
       protected $ws: WebSocketClient;
+      /** @ignore */
       protected $options!: IAria2ClientOptions & IAria2WSClientOptions;
+      /** @ignore */
       protected $respCallbacks = new Map<
         string | number | undefined,
         (data: any) => void
       >();
+      /** @ignore */
       protected $openCallbacks: Array<() => void> = [];
+      /** @ignore */
       protected $opened = false;
+      /**
+       * **Event Emitter**
+       *
+       * Events:
+       * - WebSocket
+       *  - `ws.open`
+       *  - `ws.message`
+       *  - `ws.close`
+       * - Aria2 Notifications
+       *  - `aria2.onDownloadStart`
+       *  - `aria2.onDownloadPause`
+       *  - `aria2.onDownloadStop`
+       *  - `aria2.onDownloadComplete`
+       *  - `aria2.onDownloadError`
+       *  - `aria2.onBtDownloadComplete`;
+       */
       public events = new EventEmitter({ captureRejections: true });
       /**
        * @constructor
