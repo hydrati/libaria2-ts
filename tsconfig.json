@@ -64,7 +64,8 @@
     "node_modules/**/*",
     "dist/**/*",
     "etc/**/*",
-    "src/spawn.ts"
+    "src/spawn.ts",
+    "src/when.ts"
   ],
   "include": [
     "src/**/*"

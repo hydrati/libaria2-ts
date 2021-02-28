@@ -47,7 +47,13 @@ import {
 } from "./parser";
 
 export namespace Aria2 {
+  /** Aria2 WebSocket */
   export namespace WebSocket {
+    /**
+     * ### Aria2 WebSocket Client
+     *
+     * aria2 provides JSON-RPC over HTTP and XML-RPC over HTTP interfaces that offer basically the same functionality. aria2 also provides JSON-RPC over WebSocket. JSON-RPC over WebSocket uses the same method signatures and response format as JSON-RPC over HTTP, but additionally provides server-initiated notifications. See JSON-RPC over WebSocket section for more information.
+     */
     export class Client implements Aria2ClientBaseClass<IAria2WSClientOptions> {
       protected $ws: WebSocketClient;
       protected $options!: IAria2ClientOptions & IAria2WSClientOptions;
@@ -58,11 +64,7 @@ export namespace Aria2 {
       protected $openCallbacks: Array<() => void> = [];
       protected $opened = false;
       public events = new EventEmitter({ captureRejections: true });
-
       /**
-       * ### Aria2 JSONRPC Client - WebSocket
-       *
-       * aria2 provides JSON-RPC over HTTP and XML-RPC over HTTP interfaces that offer basically the same functionality. aria2 also provides JSON-RPC over WebSocket. JSON-RPC over WebSocket uses the same method signatures and response format as JSON-RPC over HTTP, but additionally provides server-initiated notifications. See JSON-RPC over WebSocket section for more information.
        * @constructor
        * @param options Options for creating a client.
        */
@@ -710,7 +712,7 @@ export namespace Aria2 {
        * @returns IAria2GlobalStat
        */
       public async getGlobalStat(): Promise<IAria2GlobalStat> {
-        let resp = await this.$sendJson("aria2.getGlobalOption");
+        let resp = await this.$sendJson("aria2.getGlobalStat");
         if (resp.error != undefined) {
           this.$errorHandle(resp.error);
           throw resp.error;
@@ -924,7 +926,8 @@ export namespace Aria2 {
       ): Promise<TAria2ClientGID> {
         if (typeof uris == "string") uris = [uris];
         let args: unknown[] = [uris];
-        if (options != undefined) args.push(fromTAria2ClientInputOption(options));
+        if (options != undefined)
+          args.push(fromTAria2ClientInputOption(options));
         if (options != undefined && position != undefined) args.push(options);
         else if (position != undefined) throw "Require `options`!";
         let resl = await this.$sendJson("aria2.addUri", ...args);
@@ -1003,6 +1006,19 @@ export namespace Aria2 {
         } else {
           return (resp.result as unknown) as R;
         }
+      }
+
+      /**
+       * Close the WebSocket Connection.
+       * @param code Disconnect Code
+       * @param data Some string
+       */
+      public async closeConnection<T extends string>(
+        code?: number,
+        data?: T
+      ): Promise<void> {
+        this.$ws.close(code, data);
+        return;
       }
     }
 
@@ -1115,6 +1131,11 @@ export namespace Aria2 {
     }
   }
   export namespace Http {
+    /**
+     * ### Aria2 Http Client
+     * **Note: Work in progress**
+     *
+     */
     export class Client /* implements Aria2ClientBaseClass */ {
       constructor(...anything) {
         throw new Error("Aria2 HttpClient WIP!");
