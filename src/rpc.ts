@@ -778,18 +778,14 @@ export namespace Aria2 {
         }
       }
 
-      /**
-       * ## Error Handle
-       * @param e
-       * @returns void
-       */
+      /** @ignore */
       protected $errorHandle = (e: Error | object) => {
         console.error(e);
       };
 
       /**
        * ## Wait WebSocket Open
-       *
+       * @ignore
        * @returns Promise<void>
        */
 
@@ -806,6 +802,7 @@ export namespace Aria2 {
 
       /**
        * ## Send raw data
+       * @ignore
        * @param data Data to be sent
        */
       protected $sendRaw = (data: any) =>
@@ -819,6 +816,7 @@ export namespace Aria2 {
           });
         });
 
+      /** @ignore */
       protected $sendJson = (method: string, ...params: any[]) =>
         new Promise<IJsonRPCResponse>(async (r, j) => {
           await this.$waitOpened();
@@ -990,6 +988,7 @@ export namespace Aria2 {
         }
       }
 
+      /** @ignore */
       protected $systemMethods = new SystemMethods(
         this.$sendJson,
         this.$sendRaw,
