@@ -66,8 +66,10 @@ export namespace Aria2 {
        * @constructor
        * @param options Options for creating a client.
        */
-      constructor(options: IAria2ClientOptions & IAria2WSClientOptions) {
-        this.$options = { ...options };
+      constructor(
+        options: Readonly<IAria2ClientOptions & IAria2WSClientOptions>
+      ) {
+        this.$options = Object.assign({}, options);
 
         this.$ws = new WebSocketClient(
           `${options.protocol ?? "ws"}://${options.host}:${options.port}${

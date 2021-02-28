@@ -1,6 +1,6 @@
 {
     "name": "libaria2-ts",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A full-typing wrapper around `aria2`, `The next generation download utility`.",
     "repository": "https://github.com/im-oxygen/libaria2-ts/",
     "keywords": ["aria2", "download", "http", "websocket", "metalink", "magnet", "ftp", "bittorrent", "typescript"],
