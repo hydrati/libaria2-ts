@@ -22,8 +22,6 @@ export abstract class Aria2ClientBaseClass<T> {
     options?: IAria2ClientOptions,
     position?: number
   ): Promise<TAria2ClientGID>;
-
-  // Todos
   public abstract addMetalink(
     metalink: Buffer | string,
     options?: IAria2ClientOptions,
