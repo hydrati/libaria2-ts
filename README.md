@@ -1,4 +1,4 @@
-# libaria2.ts
+# [libaria2.ts](https://www.npmjs.com/package/libaria2-ts)
 TypeScript (Node.js & ~~Browser~~(WIP) ) library for [aria2](https://aria2.github.io/).
 
 - [libaria2.ts](#libaria2ts)
@@ -15,7 +15,7 @@ libaria2.ts uses [Aria2 JSON-RPC Interface](https://aria2.github.io/manual/en/ht
 ## Features
 - Node.js and ~~browsers support~~ (WIP)
 - Multiple Transports
-  - [HTTP](https://aria2.github.io/manual/en/html/aria2c.html#rpc-interface)
+  - [~~HTTP~~ (WIP)](https://aria2.github.io/manual/en/html/aria2c.html#rpc-interface)
   - [WebSocket](https://aria2.github.io/manual/en/html/aria2c.html#json-rpc-over-websocket)
 - Promise-based API
 - Full-Typing, JSDoc
