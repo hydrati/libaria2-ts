@@ -96,6 +96,10 @@ export abstract class Aria2ClientBaseClass<T> {
   public abstract removeDownloadResult(
     gid: TAria2ClientGID
   ): Promise<TAria2RemoveDownloadResult>;
+  public abstract rawCall<T, R>(
+    methods: TAria2MethodNames,
+    ...args: T[]
+  ): Promise<R>;
 }
 
 export type TAria2RemoveDownloadResult = string;
@@ -380,6 +384,7 @@ export interface IAria2SpawnOptions {
   aria2cPath: string;
 }
 
+// The Method Names
 export type TAria2MethodNames =
   | "aria2.addUri"
   | "aria2.addTorrent"
@@ -418,6 +423,7 @@ export type TAria2MethodNames =
   | "system.listMethods"
   | "system.listNotifications";
 
+// Input Option Item Names
 export type TAria2ClientInputOptionNames =
   | "all-proxy"
   | "all-proxy-passwd"
@@ -543,6 +549,10 @@ export type TAria2ClientInputOptionNames =
   | "save-cookies"
   | "save-session"
   | "server-stat-of";
+
+/**
+ * The Input Option
+ */
 export type TAria2ClientInputOption = {
   [index in TAria2ClientInputOptionNames]?:
     | boolean

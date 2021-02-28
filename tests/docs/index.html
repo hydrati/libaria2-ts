@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>libaria2-ts</title>
+	<meta name="description" content="Documentation for libaria2-ts">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">libaria2-ts</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>libaria2-ts</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<p><strong>(note: This package is still under development, please don&#39;t use it in a production environment.)</strong></p>
+				<a href="#libaria2ts" id="libaria2ts" style="color: inherit; text-decoration: none;">
+					<h1><a href="https://www.npmjs.com/package/libaria2-ts">libaria2.ts</a></h1>
+				</a>
+				<p><img src="https://img.shields.io/bundlephobia/min/libaria2-ts?label=size&style=for-the-badge" alt="npm bundle size">
+					<img src="https://img.shields.io/github/directory-file-count/im-oxygen/libaria2-ts?style=for-the-badge" alt="GitHub repo file count">
+					<img src="https://img.shields.io/npm/dm/libaria2-ts?style=for-the-badge" alt="npm">
+				<img src="https://img.shields.io/github/stars/im-oxygen/libaria2-ts?style=for-the-badge" alt="GitHub Repo stars"></p>
+				<p>TypeScript (Node.js &amp; <del>Browser</del>(WIP) ) library for <a href="https://aria2.github.io/">aria2</a>.</p>
+				<ul>
+					<li><a href="#libaria2ts">libaria2.ts</a><ul>
+							<li><a href="#introduction">Introduction</a></li>
+							<li><a href="#features">Features</a></li>
+							<li><a href="#getting-started">Getting Started</a></li>
+							<li><a href="#usage">Usage</a><ul>
+									<li><a href="#create-client">Create client</a></li>
+									<li><a href="#methods">Methods</a></li>
+								</ul>
+							</li>
+							<li><a href="#license">License</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#introduction" id="introduction" style="color: inherit; text-decoration: none;">
+					<h2>Introduction</h2>
+				</a>
+				<p>libaria2.ts uses <a href="https://aria2.github.io/manual/en/html/aria2c.html#rpc-interface">Aria2 JSON-RPC Interface</a> to control it.</p>
+				<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+					<h2>Features</h2>
+				</a>
+				<ul>
+					<li>Node.js and <del>browsers support</del> (WIP)</li>
+					<li>Multiple Transports<ul>
+							<li><a href="https://aria2.github.io/manual/en/html/aria2c.html#rpc-interface"><del>HTTP</del> (WIP)</a></li>
+							<li><a href="https://aria2.github.io/manual/en/html/aria2c.html#json-rpc-over-websocket">WebSocket</a></li>
+						</ul>
+					</li>
+					<li>Promise-based API</li>
+					<li>Full-Typing, JSDoc</li>
+				</ul>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<p>Install this package</p>
+				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> --</span><span style="color: #001080">save</span><span style="color: #000000"> </span><span style="color: #001080">libaria2</span><span style="color: #000000">-</span><span style="color: #001080">ts</span>
+</code></pre>
+				<p>or</p>
+				<pre><code><span style="color: #001080">yarn</span><span style="color: #000000"> </span><span style="color: #001080">add</span><span style="color: #000000"> </span><span style="color: #001080">libaria2</span><span style="color: #000000">-</span><span style="color: #001080">ts</span>
+</code></pre>
+				<p>Start aria2 with rpc, example</p>
+				<pre><code><span style="color: #001080">aria2c</span><span style="color: #000000"> --</span><span style="color: #001080">enable</span><span style="color: #000000">-</span><span style="color: #001080">rpc</span><span style="color: #000000"> --</span><span style="color: #001080">rpc</span><span style="color: #000000">-</span><span style="color: #001080">listen</span><span style="color: #000000">-</span><span style="color: #001080">all</span><span style="color: #000000">=</span><span style="color: #0000FF">true</span><span style="color: #000000"> --</span><span style="color: #001080">rpc</span><span style="color: #000000">-</span><span style="color: #001080">allow</span><span style="color: #000000">-</span><span style="color: #001080">origin</span><span style="color: #000000">-</span><span style="color: #001080">all</span>
+</code></pre>
+				<p><del>or use TypeScript API</del> (deprecated)</p>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<a href="#create-client" id="create-client" style="color: inherit; text-decoration: none;">
+					<h3>Create client</h3>
+				</a>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">WebSocketClient</span><span style="color: #000000"> </span><span style="color: #AF00DB">as</span><span style="color: #000000"> </span><span style="color: #001080">Aria2</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;libaria2-ts&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">aria2</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Aria2</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #008000">// Your Options...</span>
+<span style="color: #000000">});</span>
+</code></pre>
+				<p>Example options</p>
+				<pre><code class="language-ts"><span style="color: #000000">{</span>
+<span style="color: #000000">  host: </span><span style="color: #A31515">&#039;localhost&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  port: </span><span style="color: #098658">6800</span><span style="color: #000000">,</span>
+<span style="color: #000000">  path: </span><span style="color: #A31515">&#039;/jsonrpc&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  auth: {</span>
+<span style="color: #000000">    secret: </span><span style="color: #A31515">&#039;hello&#039;</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<a href="#methods" id="methods" style="color: inherit; text-decoration: none;">
+					<h3>Methods</h3>
+				</a>
+				<pre><code class="language-ts"><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">ver</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">getVersion</span><span style="color: #000000">();</span>
+<span style="color: #008000">/*</span>
+<span style="color: #008000"> * Output:</span>
+<span style="color: #008000"> * { version: &#039;...&#039;, enableFeatues: [...] }</span>
+<span style="color: #008000"> */</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">resl</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #001080">system</span><span style="color: #000000">.</span><span style="color: #795E26">multicall</span><span style="color: #000000">(</span>
+<span style="color: #000000">  { </span><span style="color: #001080">methodName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;aria2.getVersion&#039;</span><span style="color: #000000">, </span><span style="color: #001080">params:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">methodName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;aria2.addUri&#039;</span><span style="color: #000000">, </span><span style="color: #001080">params:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;http://example.com/qwer.zip&#039;</span><span style="color: #000000">] }</span>
+<span style="color: #000000">);</span>
+
+<span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #001080">events</span><span style="color: #000000">.</span><span style="color: #795E26">on</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.onDownloadStart&#039;</span><span style="color: #000000">, () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;Download Started&quot;</span><span style="color: #000000">);</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">shutdown</span><span style="color: #000000">();</span>
+<span style="color: #008000">// Output: &quot;OK&quot;</span>
+
+</code></pre>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<pre><code><span style="color: #0070C1">MIT</span><span style="color: #000000"> </span><span style="color: #001080">License</span>
+
+<span style="color: #795E26">Copyright</span><span style="color: #000000"> (</span><span style="color: #001080">c</span><span style="color: #000000">) </span><span style="color: #098658">2021</span><span style="color: #000000"> </span><span style="color: #001080">Oxygen</span>
+
+<span style="color: #001080">Permission</span><span style="color: #000000"> </span><span style="color: #001080">is</span><span style="color: #000000"> </span><span style="color: #001080">hereby</span><span style="color: #000000"> </span><span style="color: #001080">granted</span><span style="color: #000000">, </span><span style="color: #001080">free</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">charge</span><span style="color: #000000">, </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">any</span><span style="color: #000000"> </span><span style="color: #001080">person</span><span style="color: #000000"> </span><span style="color: #001080">obtaining</span><span style="color: #000000"> </span><span style="color: #001080">a</span><span style="color: #000000"> </span><span style="color: #001080">copy</span>
+<span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000"> </span><span style="color: #001080">software</span><span style="color: #000000"> </span><span style="color: #001080">and</span><span style="color: #000000"> </span><span style="color: #001080">associated</span><span style="color: #000000"> </span><span style="color: #001080">documentation</span><span style="color: #000000"> </span><span style="color: #795E26">files</span><span style="color: #000000"> (</span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Software&quot;</span><span style="color: #000000">), </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">deal</span>
+<span style="color: #0000FF">in</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #001080">Software</span><span style="color: #000000"> </span><span style="color: #001080">without</span><span style="color: #000000"> </span><span style="color: #001080">restriction</span><span style="color: #000000">, </span><span style="color: #001080">including</span><span style="color: #000000"> </span><span style="color: #001080">without</span><span style="color: #000000"> </span><span style="color: #001080">limitation</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #001080">rights</span>
+<span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">use</span><span style="color: #000000">, </span><span style="color: #001080">copy</span><span style="color: #000000">, </span><span style="color: #001080">modify</span><span style="color: #000000">, </span><span style="color: #001080">merge</span><span style="color: #000000">, </span><span style="color: #001080">publish</span><span style="color: #000000">, </span><span style="color: #001080">distribute</span><span style="color: #000000">, </span><span style="color: #001080">sublicense</span><span style="color: #000000">, </span><span style="color: #001080">and</span><span style="color: #000000">/</span><span style="color: #001080">or</span><span style="color: #000000"> </span><span style="color: #001080">sell</span>
+<span style="color: #001080">copies</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #001080">Software</span><span style="color: #000000">, </span><span style="color: #001080">and</span><span style="color: #000000"> </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">permit</span><span style="color: #000000"> </span><span style="color: #001080">persons</span><span style="color: #000000"> </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">whom</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #001080">Software</span><span style="color: #000000"> </span><span style="color: #001080">is</span>
+<span style="color: #001080">furnished</span><span style="color: #000000"> </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #AF00DB">do</span><span style="color: #000000"> </span><span style="color: #001080">so</span><span style="color: #000000">, </span><span style="color: #001080">subject</span><span style="color: #000000"> </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #001080">following</span><span style="color: #000000"> conditions:</span>
+
+<span style="color: #001080">The</span><span style="color: #000000"> </span><span style="color: #001080">above</span><span style="color: #000000"> </span><span style="color: #001080">copyright</span><span style="color: #000000"> </span><span style="color: #001080">notice</span><span style="color: #000000"> </span><span style="color: #001080">and</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000"> </span><span style="color: #001080">permission</span><span style="color: #000000"> </span><span style="color: #001080">notice</span><span style="color: #000000"> </span><span style="color: #001080">shall</span><span style="color: #000000"> </span><span style="color: #001080">be</span><span style="color: #000000"> </span><span style="color: #001080">included</span><span style="color: #000000"> </span><span style="color: #0000FF">in</span><span style="color: #000000"> </span><span style="color: #001080">all</span>
+<span style="color: #001080">copies</span><span style="color: #000000"> </span><span style="color: #001080">or</span><span style="color: #000000"> </span><span style="color: #001080">substantial</span><span style="color: #000000"> </span><span style="color: #001080">portions</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #001080">Software</span><span style="color: #000000">.</span>
+
+<span style="color: #0070C1">THE</span><span style="color: #000000"> </span><span style="color: #0070C1">SOFTWARE</span><span style="color: #000000"> </span><span style="color: #0070C1">IS</span><span style="color: #000000"> </span><span style="color: #0070C1">PROVIDED</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;AS IS&quot;</span><span style="color: #000000">, </span><span style="color: #0070C1">WITHOUT</span><span style="color: #000000"> </span><span style="color: #0070C1">WARRANTY</span><span style="color: #000000"> </span><span style="color: #0070C1">OF</span><span style="color: #000000"> </span><span style="color: #0070C1">ANY</span><span style="color: #000000"> </span><span style="color: #0070C1">KIND</span><span style="color: #000000">, </span><span style="color: #0070C1">EXPRESS</span><span style="color: #000000"> </span><span style="color: #0070C1">OR</span>
+<span style="color: #0070C1">IMPLIED</span><span style="color: #000000">, </span><span style="color: #0070C1">INCLUDING</span><span style="color: #000000"> </span><span style="color: #0070C1">BUT</span><span style="color: #000000"> </span><span style="color: #0070C1">NOT</span><span style="color: #000000"> </span><span style="color: #0070C1">LIMITED</span><span style="color: #000000"> </span><span style="color: #0070C1">TO</span><span style="color: #000000"> </span><span style="color: #0070C1">THE</span><span style="color: #000000"> </span><span style="color: #0070C1">WARRANTIES</span><span style="color: #000000"> </span><span style="color: #0070C1">OF</span><span style="color: #000000"> </span><span style="color: #0070C1">MERCHANTABILITY</span><span style="color: #000000">,</span>
+<span style="color: #0070C1">FITNESS</span><span style="color: #000000"> </span><span style="color: #0070C1">FOR</span><span style="color: #000000"> </span><span style="color: #0070C1">A</span><span style="color: #000000"> </span><span style="color: #0070C1">PARTICULAR</span><span style="color: #000000"> </span><span style="color: #0070C1">PURPOSE</span><span style="color: #000000"> </span><span style="color: #0070C1">AND</span><span style="color: #000000"> </span><span style="color: #0070C1">NONINFRINGEMENT</span><span style="color: #000000">. </span><span style="color: #0070C1">IN</span><span style="color: #000000"> </span><span style="color: #0070C1">NO</span><span style="color: #000000"> </span><span style="color: #0070C1">EVENT</span><span style="color: #000000"> </span><span style="color: #0070C1">SHALL</span><span style="color: #000000"> </span><span style="color: #0070C1">THE</span>
+<span style="color: #0070C1">AUTHORS</span><span style="color: #000000"> </span><span style="color: #0070C1">OR</span><span style="color: #000000"> </span><span style="color: #0070C1">COPYRIGHT</span><span style="color: #000000"> </span><span style="color: #0070C1">HOLDERS</span><span style="color: #000000"> </span><span style="color: #0070C1">BE</span><span style="color: #000000"> </span><span style="color: #0070C1">LIABLE</span><span style="color: #000000"> </span><span style="color: #0070C1">FOR</span><span style="color: #000000"> </span><span style="color: #0070C1">ANY</span><span style="color: #000000"> </span><span style="color: #0070C1">CLAIM</span><span style="color: #000000">, </span><span style="color: #0070C1">DAMAGES</span><span style="color: #000000"> </span><span style="color: #0070C1">OR</span><span style="color: #000000"> </span><span style="color: #0070C1">OTHER</span>
+<span style="color: #0070C1">LIABILITY</span><span style="color: #000000">, </span><span style="color: #0070C1">WHETHER</span><span style="color: #000000"> </span><span style="color: #0070C1">IN</span><span style="color: #000000"> </span><span style="color: #0070C1">AN</span><span style="color: #000000"> </span><span style="color: #0070C1">ACTION</span><span style="color: #000000"> </span><span style="color: #0070C1">OF</span><span style="color: #000000"> </span><span style="color: #0070C1">CONTRACT</span><span style="color: #000000">, </span><span style="color: #0070C1">TORT</span><span style="color: #000000"> </span><span style="color: #0070C1">OR</span><span style="color: #000000"> </span><span style="color: #0070C1">OTHERWISE</span><span style="color: #000000">, </span><span style="color: #0070C1">ARISING</span><span style="color: #000000"> </span><span style="color: #0070C1">FROM</span><span style="color: #000000">,</span>
+<span style="color: #0070C1">OUT</span><span style="color: #000000"> </span><span style="color: #0070C1">OF</span><span style="color: #000000"> </span><span style="color: #0070C1">OR</span><span style="color: #000000"> </span><span style="color: #0070C1">IN</span><span style="color: #000000"> </span><span style="color: #0070C1">CONNECTION</span><span style="color: #000000"> </span><span style="color: #0070C1">WITH</span><span style="color: #000000"> </span><span style="color: #0070C1">THE</span><span style="color: #000000"> </span><span style="color: #0070C1">SOFTWARE</span><span style="color: #000000"> </span><span style="color: #0070C1">OR</span><span style="color: #000000"> </span><span style="color: #0070C1">THE</span><span style="color: #000000"> </span><span style="color: #0070C1">USE</span><span style="color: #000000"> </span><span style="color: #0070C1">OR</span><span style="color: #000000"> </span><span style="color: #0070C1">OTHER</span><span style="color: #000000"> </span><span style="color: #0070C1">DEALINGS</span><span style="color: #000000"> </span><span style="color: #0070C1">IN</span><span style="color: #000000"> </span><span style="color: #0070C1">THE</span>
+<span style="color: #0070C1">SOFTWARE</span><span style="color: #000000">.</span>
+</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
