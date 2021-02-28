@@ -13,10 +13,11 @@ TypeScript (Node.js & ~~Browser~~(WIP) ) library for [aria2](https://aria2.githu
 - [libaria2.ts](#libaria2ts)
   - [Introduction](#introduction)
   - [Features](#features)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
+  - [Getting Started](#getting-started)
+  - [Usage](#usage)
     - [Create client](#create-client)
     - [Methods](#methods)
+  - [License](#license)
 
 ## Introduction
 libaria2.ts uses [Aria2 JSON-RPC Interface](https://aria2.github.io/manual/en/html/aria2c.html#rpc-interface) to control it.
@@ -29,7 +30,7 @@ libaria2.ts uses [Aria2 JSON-RPC Interface](https://aria2.github.io/manual/en/ht
 - Promise-based API
 - Full-Typing, JSDoc
 
-# Getting Started
+## Getting Started
 
 Install this package
 ```
@@ -47,7 +48,7 @@ aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all
 ```
 ~~or use TypeScript API~~ (deprecated)
 
-# Usage
+## Usage
 
 ### Create client
 ```ts
@@ -89,4 +90,29 @@ aria2.events.on('aria2.onDownloadStart', () => {
 await aria2.shutdown();
 // Output: "OK"
 
+```
+
+## License
+```
+MIT License
+
+Copyright (c) 2021 Oxygen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
