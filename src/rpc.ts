@@ -1022,12 +1022,18 @@ export namespace Aria2 {
       }
     }
 
-    class SystemMethods implements IAria2ClientSystem {
+    export class SystemMethods implements IAria2ClientSystem {
+      /** @ignore */
       private $sendJson;
+      /** @ignore */
       private $sendRaw;
+      /** @ignore */
       private $options;
+      /** @ignore */
       private $respCallbacks;
+      /** @ignore */
       private $waitOpened;
+      /** @ignore */
       constructor(sendJson, sendRaw, options, respCallbacks, waitOpened) {
         this.$sendJson = sendJson;
         this.$respCallbacks = respCallbacks;

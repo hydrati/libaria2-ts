@@ -1,7 +1,5 @@
 import type WebSocket from "ws";
 import type EventEmitter from "events";
-import path from "path";
-
 export abstract class Aria2ClientBaseClass<T> {
   constructor(options: IAria2ClientOptions & T) {}
   public abstract events: EventEmitter;
@@ -329,9 +327,12 @@ export interface IAria2ClientSystem {
   listNotifications(): Promise<TAria2ClientNotificationList>;
 }
 
-export type TAria2ClientMethodList = string[];
+export type TAria2ClientMethodList = (string | TAria2MethodNames)[];
 
-export type TAria2ClientNotificationList = string[];
+export type TAria2ClientNotificationList = (
+  | string
+  | TAria2ClientNotificationNames
+)[];
 
 export type TAria2ClientMulticallResult = Array<Promise<object>>;
 
@@ -563,3 +564,11 @@ export type TAria2ClientInputOption = {
 };
 
 export type TAria2ClientGID = string;
+
+export type TAria2ClientNotificationNames =
+  | "aria2.onDownloadStart"
+  | "aria2.onDownloadPause"
+  | "aria2.onDownloadStop"
+  | "aria2.onDownloadComplete"
+  | "aria2.onDownloadError"
+  | "aria2.onBtDownloadComplete";
