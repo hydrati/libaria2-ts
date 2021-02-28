@@ -27,6 +27,7 @@ libaria2.ts uses [Aria2 JSON-RPC Interface](https://aria2.github.io/manual/en/ht
 - Full-Typing, JSDoc
 
 # Getting Started
+
 Install this package
 ```
 npm install --save libaria2-ts
@@ -37,20 +38,11 @@ yarn add libaria2-ts
 ```
 
 
-
 Start aria2 with rpc, example
 ```
 aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all
 ```
-or use TypeScript API
-```ts
-import { Spawn } from 'libaria2-ts';
-const aria2Srv = new Spawn.Aria2Process({
-  aria2cPath: "<your aria2c path>",
-});
-await aria2Srv.spawn(); // Spawn Process
-await aria2Srv.process.kill() // Kill Process
-```
+~~or use TypeScript API~~ (deprecated)
 
 # Usage
 
