@@ -1,6 +1,6 @@
 {
     "name": "libaria2-ts",
-    "version": "1.0.566",
+    "version": "1.0.567",
     "description": "A full-typing wrapper around `aria2`, `The next generation download utility`.",
     "repository": "https://github.com/im-oxygen/libaria2-ts",
     "homepage": "https://aria2.github.io/",
@@ -19,6 +19,7 @@
     "types": "dist/lib.d.ts",
     "license": "MIT",
     "scripts": {
+        "build:docs": "typedoc --tsconfig ./tsconfig.json ./src/lib.ts",
         "build": "tsc --build ./tsconfig.json",
         "test": "ts-node ./tests/index.ts",
         "lint": "eslint -c ./.eslintrc"
@@ -34,6 +35,7 @@
         "eslint-plugin-import": "2.22.1",
         "eslint-plugin-node": "11.1.0",
         "eslint-plugin-promise": "4.2.1",
+        "typedoc": "^0.20.28",
         "typescript": "^4.1.3"
     },
     "dependencies": {
