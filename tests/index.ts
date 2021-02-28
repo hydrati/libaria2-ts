@@ -1,4 +1,4 @@
-import { WebSocketClient as Aria2 } from "libaria2-ts";
+import { WebSocketClient as Aria2 } from "../src/lib";
 
 const aria2 = new Aria2({
   protocol: "ws",
@@ -7,5 +7,5 @@ const aria2 = new Aria2({
 });
 
 await aria2.addUri("http://localhost:8800/test.zip", {
-  header: "",
+  header: 12,
 });

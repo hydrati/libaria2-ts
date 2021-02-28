@@ -544,7 +544,7 @@ export type TAria2ClientInputOptionNames =
   | "save-session"
   | "server-stat-of";
 export type TAria2ClientInputOption = {
-  [index in TAria2ClientInputOptionNames]:
+  [index in TAria2ClientInputOptionNames]?:
     | boolean
     | string
     | number
