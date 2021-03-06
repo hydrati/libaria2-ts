@@ -315,18 +315,7 @@ export namespace RpcWebSocket {
 export namespace RpcHttp {
   /**
    * ### Aria2 Http Client
-   *    **Events**
-   *  - WebSocket
-   *    * `ws.open`
-   *    * `ws.message`
-   *    * `ws.close`
-   *  - Aria2 Notifications
-   *    * `aria2.onDownloadStart`
-   *    * `aria2.onDownloadPause`
-   *    * `aria2.onDownloadStop`
-   *    * `aria2.onDownloadComplete`
-   *    * `aria2.onDownloadError`
-   *    * `aria2.onBtDownloadComplete`;
+   *    **Events is not supported**
    */
   export class Client extends Aria2ClientBaseClass<IAria2HttpClientOptions> {
     /** @ignore */
