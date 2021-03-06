@@ -8,7 +8,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/im-oxygen/libaria2-ts?style=for-the-badge)
 
 
-TypeScript (Node.js & ~~Browser~~(WIP) ) library for [aria2](https://aria2.github.io/).
+TypeScript (Node.js & Browser ) library for [aria2](https://aria2.github.io/).
 
 - [libaria2.ts](#libaria2ts)
   - [Introduction](#introduction)
