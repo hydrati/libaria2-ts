@@ -2,14 +2,16 @@ import ts from 'rollup-plugin-typescript2';
 import babel from '@rollup/plugin-babel';
 import node from '@rollup/plugin-node-resolve';
 import path from 'path';
+import json from '@rollup/plugin-json';
+import cjs from '@rollup/plugin-commonjs';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 export default [{
     input: path.resolve(__dirname, 'src', 'lib.ts'),
     plugins: [node({
             browser: true,
-        }), ts({
+        }), cjs({ sourceMap: true }), ts({
             tsconfig: path.resolve(__dirname, 'tsconfig.json')
-        }), babel({
+        }), json({ compact: true }), babel({
             presets: ['@babel/env', {
                 exclude: [
                     "transform-async-to-generator",
@@ -49,9 +51,9 @@ export default [{
     plugins: [node({
             browser: false,
             "exportConditions": ["node"]
-        }), ts({
+        }), cjs({ sourceMap: true }), ts({
             tsconfig: path.resolve(__dirname, 'tsconfig.json'),
-        }), babel({
+        }), json({ compact: true }), babel({
             presets: ['@babel/env', {
                 exclude: [
                     "transform-async-to-generator",

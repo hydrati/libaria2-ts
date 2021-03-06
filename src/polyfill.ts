@@ -1,4 +1,4 @@
-import { Base64 } from "./utils";
+import { Base64, isNode } from "./utils";
 
 export const WebSocketClient = (() => {
   if (globalThis.WebSocket != undefined) {
@@ -8,16 +8,8 @@ export const WebSocketClient = (() => {
   }
 })();
 
-export const HttpFetch: typeof fetch = () => {
-  if (globalThis.fetch != undefined) {
-    return globalThis.fetch;
-  } else {
-    return require("isomorphic-fetch");
-  }
-};
-
 export const btoa: (s: string) => string = (() => {
-  if (process?.versions?.node != undefined) {
+  if (isNode()) {
     return Base64.btoa;
   } else if (globalThis.btoa != undefined) {
     return globalThis.btoa;
@@ -27,7 +19,7 @@ export const btoa: (s: string) => string = (() => {
 })();
 
 export const atob: (s: string) => string = (() => {
-  if (process?.versions?.node != undefined) {
+  if (isNode()) {
     return Base64.atob;
   } else if (globalThis.atob != undefined) {
     return globalThis.atob;

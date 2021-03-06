@@ -10,6 +10,7 @@ import {
   intoTAria2ClientInputOption,
   intoIAria2GlobalStat,
 } from "./parser";
+import { AxiosRequestConfig } from "axios";
 
 export abstract class Aria2ClientBaseClass<T> extends When {
   /**
@@ -981,7 +982,7 @@ export interface IAria2WSClientOptions {
 
 export interface IAria2HttpClientOptions {
   protocol?: "http" | "https";
-  fetchOptions?: Readonly<RequestInit>;
+  fetchOptions?: Readonly<AxiosRequestConfig>;
 }
 
 export interface IAria2RpcOptions {

@@ -8,7 +8,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/im-oxygen/libaria2-ts?style=for-the-badge)
 
 
-TypeScript (Node.js & Browser ) library for [aria2](https://aria2.github.io/).
+TypeScript (Node.js & Browser) library for [aria2](https://aria2.github.io/).
 
 - [libaria2.ts](#libaria2ts)
   - [Introduction](#introduction)
@@ -83,9 +83,19 @@ const resl = await aria2.system.multicall(
   { methodName: 'aria2.addUri', params: ['http://example.com/qwer.zip'] }
 );
 
+let event = await aria2.when('aria2.onDownloadStart');
+console.log(`Download ${event.gid} Started`);
+
+// or:
+aria2.when('aria2.onDownloadStart').then((event: IAria2NotificationEvent) => {
+  console.log(`Download ${event.gid} Started`);
+})
+
+// or:
 aria2.addEventListener('aria2.onDownloadStart', (event: IAria2NotificationEvent) => {
   console.log(`Download ${event.gid} Started`);
 });
+
 
 await aria2.shutdown();
 // Output: "OK"

@@ -1,42 +1,23 @@
 import * as uuid from "uuid";
 import {
   IAria2ClientOptions,
-  IAria2Version,
   IAria2WSClientOptions,
-  TAria2SaveSessionResult,
-  TAria2ShutdownResult,
   IJsonRPCResponse,
   IJsonRPCRequest,
   TAria2ClientMethodList,
   TAria2ClientNotificationList,
   IAria2ClientMulticallItem,
   TAria2ClientMulticallResult,
-  IAria2ClientSessionInfo,
-  TAria2ClientGID,
   Aria2ClientBaseClass,
-  EAria2ChangePositionHow,
-  IAria2DownloadStatus,
-  IAria2FileStatus,
-  IAria2GlobalStat,
-  IAria2PeersInfo,
-  IAria2UriStatus,
-  TAria2ChangeUriResult,
-  TAria2ClientInputOption,
-  TAria2ServersInfo,
-  TAria2PauseAllResult,
-  TAria2ChangePositionResult,
-  TAria2DownloadFileIndex,
-  TAria2ChangeOptionResult,
-  TAria2PurgeDownloadResult,
-  TAria2RemoveDownloadResult,
-  TAria2MethodNames,
   IAria2NotificationEvent,
 } from "./adapter";
-import { WebSocketClient, HttpFetch, btoa, atob } from "./polyfill";
+import { WebSocketClient, btoa } from "./polyfill";
+import { isNode } from "./utils";
 import {
   Aria2ClientSystemMethodsBaseClass,
   IAria2HttpClientOptions,
 } from "./adapter";
+import axios from "axios";
 
 export namespace RpcWebSocket {
   /**
@@ -83,7 +64,7 @@ export namespace RpcWebSocket {
           options.path ?? "/jsonrpc"
         }`,
         (() => {
-          if (process?.versions?.node != undefined) {
+          if (isNode()) {
             return options.wsOptions ?? {};
           } else {
             return undefined;
@@ -91,12 +72,12 @@ export namespace RpcWebSocket {
         })() as any
       );
 
-      this.$ws.addEventListener("close", () => {
+      this.$ws.onclose = () => {
         this.emit("ws.close");
         this.$opened = false;
         this.$openCallbacks = [];
-      });
-      this.$ws.addEventListener("open", () => {
+      };
+      this.$ws.onopen = () => {
         this.emit("ws.open");
         this.$opened = true;
         while (this.$openCallbacks.length > 0) {
@@ -105,8 +86,11 @@ export namespace RpcWebSocket {
             cb();
           }
         }
-      });
-      this.$ws.addEventListener("message", (data) => {
+      };
+      this.$ws.onmessage = (data) => {
+        if (data?.type == "message" || isNode()) {
+          data = data.data;
+        }
         try {
           this.emit("ws.message", data);
           let message:
@@ -170,8 +154,9 @@ export namespace RpcWebSocket {
           }
         } catch (e) {
           this.$errorHandle(e);
+          throw e;
         }
-      });
+      };
     }
 
     /** @ignore */
@@ -388,12 +373,12 @@ export namespace RpcHttp {
       }/jsonrpc?method=${decodeURIComponent(methods)}&id=${decodeURIComponent(
         id
       )}&params=${btoa(JSON.stringify(arg))}`;
-      let rsp = await fetch(url, {
+      let rsp = await axios(url, {
         method: "GET",
-        ...(this.$options?.fetchOptions ?? {}),
+        ...this.$options.fetchOptions,
       });
-      let j: IJsonRPCResponse = await rsp.json();
-      if (j.error != undefined) {
+      let j: IJsonRPCResponse = rsp.data;
+      if (j.error == undefined) {
         return (j.result as unknown) as R;
       } else {
         throw j.error;
@@ -436,11 +421,11 @@ export namespace RpcHttp {
         let url = `${op.protocol ?? "http"}://${op.host}:${
           op.port
         }/jsonrpc?method=&id=&params=${btoa(JSON.stringify(args))}`;
-        let rep = await fetch(url, {
+        let rep = await axios(url, {
           method: "GET",
-          ...(op?.fetchOptions ?? {}),
+          ...op.fetchOptions,
         });
-        for (const r of (await rep.json()) as IJsonRPCResponse[]) {
+        for (const r of rep.data as IJsonRPCResponse[]) {
           if (r.id != undefined && rvers[r.id] != undefined) {
             if (r.error != undefined) {
               rvers[r.id].j(r.error);
