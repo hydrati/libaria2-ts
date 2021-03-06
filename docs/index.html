@@ -66,7 +66,7 @@
 					<img src="https://img.shields.io/github/directory-file-count/im-oxygen/libaria2-ts?style=for-the-badge" alt="GitHub repo file count">
 					<img src="https://img.shields.io/npm/dm/libaria2-ts?style=for-the-badge" alt="npm">
 				<img src="https://img.shields.io/github/stars/im-oxygen/libaria2-ts?style=for-the-badge" alt="GitHub Repo stars"></p>
-				<p>TypeScript (Node.js &amp; <del>Browser</del>(WIP) ) library for <a href="https://aria2.github.io/">aria2</a>.</p>
+				<p>TypeScript (Node.js &amp; Browser) library for <a href="https://aria2.github.io/">aria2</a>.</p>
 				<ul>
 					<li><a href="#libaria2ts">libaria2.ts</a><ul>
 							<li><a href="#introduction">Introduction</a></li>
@@ -146,9 +146,19 @@
 <span style="color: #000000">  { </span><span style="color: #001080">methodName:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;aria2.addUri&#039;</span><span style="color: #000000">, </span><span style="color: #001080">params:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;http://example.com/qwer.zip&#039;</span><span style="color: #000000">] }</span>
 <span style="color: #000000">);</span>
 
-<span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #001080">events</span><span style="color: #000000">.</span><span style="color: #795E26">on</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.onDownloadStart&#039;</span><span style="color: #000000">, () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;Download Started&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">event</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">when</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.onDownloadStart&#039;</span><span style="color: #000000">);</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Download </span><span style="color: #0000FF">${</span><span style="color: #001080">event</span><span style="color: #000000FF">.</span><span style="color: #001080">gid</span><span style="color: #0000FF">}</span><span style="color: #A31515"> Started`</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// or:</span>
+<span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">when</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.onDownloadStart&#039;</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">event</span><span style="color: #000000">: </span><span style="color: #267F99">IAria2NotificationEvent</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Download </span><span style="color: #0000FF">${</span><span style="color: #001080">event</span><span style="color: #000000FF">.</span><span style="color: #001080">gid</span><span style="color: #0000FF">}</span><span style="color: #A31515"> Started`</span><span style="color: #000000">);</span>
+<span style="color: #000000">})</span>
+
+<span style="color: #008000">// or:</span>
+<span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">addEventListener</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.onDownloadStart&#039;</span><span style="color: #000000">, (</span><span style="color: #001080">event</span><span style="color: #000000">: </span><span style="color: #267F99">IAria2NotificationEvent</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Download </span><span style="color: #0000FF">${</span><span style="color: #001080">event</span><span style="color: #000000FF">.</span><span style="color: #001080">gid</span><span style="color: #0000FF">}</span><span style="color: #A31515"> Started`</span><span style="color: #000000">);</span>
 <span style="color: #000000">});</span>
+
 
 <span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">shutdown</span><span style="color: #000000">();</span>
 <span style="color: #008000">// Output: &quot;OK&quot;</span>
