@@ -83,8 +83,8 @@ const resl = await aria2.system.multicall(
   { methodName: 'aria2.addUri', params: ['http://example.com/qwer.zip'] }
 );
 
-aria2.events.on('aria2.onDownloadStart', () => {
-  console.log("Download Started");
+aria2.addEventListener('aria2.onDownloadStart', (event: IAria2NotificationEvent) => {
+  console.log(`Download ${event.gid} Started`);
 });
 
 await aria2.shutdown();
