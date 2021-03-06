@@ -915,6 +915,7 @@ export interface IAria2ClientOptions {
 }
 
 export abstract class Aria2ClientSystemMethodsBaseClass<T> {
+  /** @ignore */
   protected $client: Aria2ClientBaseClass<T>;
   constructor(client: Aria2ClientBaseClass<T>) {
     this.$client = client;

@@ -116,7 +116,7 @@ await aria2.closeConnection();
 More methods, see [Aria2ClientBaseClient](./classes/adapter.aria2clientbaseclass.html)
 
 ## License
-```plaintext
+```
 MIT License
 
 Copyright (c) 2021 Oxygen
