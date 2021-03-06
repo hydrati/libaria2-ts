@@ -1,6 +1,7 @@
 import ts from 'rollup-plugin-typescript2';
 import babel from '@rollup/plugin-babel';
 import node from '@rollup/plugin-node-resolve';
+import terser from 'rollup-plugin-terser';
 import path from 'path';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 export default [{
@@ -26,9 +27,9 @@ export default [{
             ],
             babelHelpers: 'bundled'
         }),
-        //  terser.terser({
-        //     mangle: true,
-        // })
+        terser.terser({
+            mangle: false,
+        })
     ],
     external: [
         'buffer',
@@ -38,11 +39,9 @@ export default [{
         'net', 'buffer',
         'crypto'
     ],
-
-
     output: [
-        { file: "dist/libaria2.browser.esm.js", format: "es" },
-        { file: "dist/libaria2.browser.cjs.js", format: "cjs" },
+        { file: "dist/libaria2.browser.esm.prod.js", format: "es" },
+        { file: "dist/libaria2.browser.cjs.prod.js", format: "cjs" },
     ]
 }, {
     input: path.resolve(__dirname, 'src', 'lib.ts'),
@@ -68,10 +67,9 @@ export default [{
             ],
             babelHelpers: 'bundled'
         }),
-        //  terser.terser({
-        //     mangle: true,
-        // }),
-
+        terser.terser({
+            mangle: false,
+        })
     ],
     external: [
         'buffer',
@@ -83,7 +81,7 @@ export default [{
         'crypto'
     ],
     output: [
-        { file: "dist/libaria2.node.esm.js", format: "es" },
-        { file: "dist/libaria2.node.cjs.js", format: "cjs" },
+        { file: "dist/libaria2.node.esm.prod.js", format: "es" },
+        { file: "dist/libaria2.node.cjs.prod.js", format: "cjs" },
     ]
 }]

@@ -12,6 +12,10 @@ import {
 } from "./parser";
 
 export abstract class Aria2ClientBaseClass<T> extends When {
+  /**
+   * @constructor
+   * @param options Options for creating a client.
+   */
   constructor() {
     super();
   }

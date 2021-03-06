@@ -23,9 +23,9 @@ TypeScript (Node.js & ~~Browser~~(WIP) ) library for [aria2](https://aria2.githu
 libaria2.ts uses [Aria2 JSON-RPC Interface](https://aria2.github.io/manual/en/html/aria2c.html#rpc-interface) to control it.
 
 ## Features
-- Node.js and ~~browsers support~~ (WIP)
+- Node.js and browsers support
 - Multiple Transports
-  - [~~HTTP~~ (WIP)](https://aria2.github.io/manual/en/html/aria2c.html#rpc-interface)
+  - [HTTP](https://aria2.github.io/manual/en/html/aria2c.html#rpc-interface)
   - [WebSocket](https://aria2.github.io/manual/en/html/aria2c.html#json-rpc-over-websocket)
 - Promise-based API
 - Full-Typing, JSDoc
@@ -91,6 +91,8 @@ await aria2.shutdown();
 // Output: "OK"
 
 ```
+
+Methods, see [Aria2ClientBaseClient](./classes/adapter.aria2clientbaseclass.html)
 
 ## License
 ```

@@ -55,16 +55,10 @@
 					<a href="../modules.html">libaria2-ts</a>
 				</li>
 				<li>
-					<a href="../modules/rpc.html">Rpc</a>
+					<a href="../modules/http.html">Http</a>
 				</li>
 				<li>
-					<a href="../modules/rpc.aria2.html">Aria2</a>
-				</li>
-				<li>
-					<a href="../modules/rpc.aria2.websocket.html">WebSocket</a>
-				</li>
-				<li>
-					<a href="rpc.aria2.websocket.client.html">Client</a>
+					<a href="http.client.html">Client</a>
 				</li>
 			</ul>
 			<h1>Class Client</h1>
@@ -77,25 +71,41 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<a href="#aria2-websocket-client" id="aria2-websocket-client" style="color: inherit; text-decoration: none;">
-							<h3>Aria2 WebSocket Client</h3>
+						<a href="#aria2-http-client" id="aria2-http-client" style="color: inherit; text-decoration: none;">
+							<h3>Aria2 Http Client</h3>
 						</a>
+						<p>   <strong>Events</strong></p>
+						<ul>
+							<li>WebSocket<ul>
+									<li><code>ws.open</code></li>
+									<li><code>ws.message</code></li>
+									<li><code>ws.close</code></li>
+								</ul>
+							</li>
+							<li>Aria2 Notifications<ul>
+									<li><code>aria2.onDownloadStart</code></li>
+									<li><code>aria2.onDownloadPause</code></li>
+									<li><code>aria2.onDownloadStop</code></li>
+									<li><code>aria2.onDownloadComplete</code></li>
+									<li><code>aria2.onDownloadError</code></li>
+									<li><code>aria2.onBtDownloadComplete</code>;</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
-					<p>aria2 provides JSON-RPC over HTTP and XML-RPC over HTTP interfaces that offer basically the same functionality. aria2 also provides JSON-RPC over WebSocket. JSON-RPC over WebSocket uses the same method signatures and response format as JSON-RPC over HTTP, but additionally provides server-initiated notifications. See JSON-RPC over WebSocket section for more information.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Client</span>
+						<a href="adapter.aria2clientbaseclass.html" class="tsd-signature-type" data-tsd-kind="Class">Aria2ClientBaseClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2httpclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2HttpClientOptions</a><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">Client</span>
+							</li>
+						</ul>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="adapter.aria2clientbaseclass.html" class="tsd-signature-type" data-tsd-kind="Class">Aria2ClientBaseClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2wsclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2WSClientOptions</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -105,59 +115,63 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#events" class="tsd-kind-icon">events</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#system" class="tsd-kind-icon">system</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#system" class="tsd-kind-icon">system</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#addmetalink" class="tsd-kind-icon">add<wbr>Metalink</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#addtorrent" class="tsd-kind-icon">add<wbr>Torrent</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#adduri" class="tsd-kind-icon">add<wbr>Uri</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#changeglobaloption" class="tsd-kind-icon">change<wbr>Global<wbr>Option</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#changeoption" class="tsd-kind-icon">change<wbr>Option</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#changeposition" class="tsd-kind-icon">change<wbr>Position</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#changeuri" class="tsd-kind-icon">change<wbr>Uri</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="rpc.aria2.websocket.client.html#closeconnection" class="tsd-kind-icon">close<wbr>Connection</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#forcepause" class="tsd-kind-icon">force<wbr>Pause</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#forcepauseall" class="tsd-kind-icon">force<wbr>Pause<wbr>All</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#forceremove" class="tsd-kind-icon">force<wbr>Remove</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#forceshutdown" class="tsd-kind-icon">force<wbr>Shutdown</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#getfiles" class="tsd-kind-icon">get<wbr>Files</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#getglobaloption" class="tsd-kind-icon">get<wbr>Global<wbr>Option</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#getglobalstat" class="tsd-kind-icon">get<wbr>Global<wbr>Stat</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#getoption" class="tsd-kind-icon">get<wbr>Option</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#getpeers" class="tsd-kind-icon">get<wbr>Peers</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#getservers" class="tsd-kind-icon">get<wbr>Servers</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#getsessioninfo" class="tsd-kind-icon">get<wbr>Session<wbr>Info</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#geturis" class="tsd-kind-icon">get<wbr>Uris</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#getversion" class="tsd-kind-icon">get<wbr>Version</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#pause" class="tsd-kind-icon">pause</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#pauseall" class="tsd-kind-icon">pause<wbr>All</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#purgedownloadresult" class="tsd-kind-icon">purge<wbr>Download<wbr>Result</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="rpc.aria2.websocket.client.html#rawcall" class="tsd-kind-icon">raw<wbr>Call</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#remove" class="tsd-kind-icon">remove</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#removedownloadresult" class="tsd-kind-icon">remove<wbr>Download<wbr>Result</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#savesession" class="tsd-kind-icon">save<wbr>Session</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#shutdown" class="tsd-kind-icon">shutdown</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="rpc.aria2.websocket.client.html#tellactive" class="tsd-kind-icon">tell<wbr>Active</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="rpc.aria2.websocket.client.html#tellstatus" class="tsd-kind-icon">tell<wbr>Status</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="rpc.aria2.websocket.client.html#tellstopped" class="tsd-kind-icon">tell<wbr>Stopped</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="rpc.aria2.websocket.client.html#tellwaiting" class="tsd-kind-icon">tell<wbr>Waiting</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#unpause" class="tsd-kind-icon">unpause</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="rpc.aria2.websocket.client.html#unpauseall" class="tsd-kind-icon">unpause<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="http.client.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#addmetalink" class="tsd-kind-icon">add<wbr>Metalink</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#addtorrent" class="tsd-kind-icon">add<wbr>Torrent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#adduri" class="tsd-kind-icon">add<wbr>Uri</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#changeglobaloption" class="tsd-kind-icon">change<wbr>Global<wbr>Option</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#changeoption" class="tsd-kind-icon">change<wbr>Option</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#changeposition" class="tsd-kind-icon">change<wbr>Position</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#changeuri" class="tsd-kind-icon">change<wbr>Uri</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#forcepause" class="tsd-kind-icon">force<wbr>Pause</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#forcepauseall" class="tsd-kind-icon">force<wbr>Pause<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#forceremove" class="tsd-kind-icon">force<wbr>Remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#forceshutdown" class="tsd-kind-icon">force<wbr>Shutdown</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="http.client.html#getcreateoptions" class="tsd-kind-icon">get<wbr>Create<wbr>Options</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#getfiles" class="tsd-kind-icon">get<wbr>Files</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#getglobaloption" class="tsd-kind-icon">get<wbr>Global<wbr>Option</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#getglobalstat" class="tsd-kind-icon">get<wbr>Global<wbr>Stat</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#getoption" class="tsd-kind-icon">get<wbr>Option</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#getpeers" class="tsd-kind-icon">get<wbr>Peers</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#getservers" class="tsd-kind-icon">get<wbr>Servers</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#getsessioninfo" class="tsd-kind-icon">get<wbr>Session<wbr>Info</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#geturis" class="tsd-kind-icon">get<wbr>Uris</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#getversion" class="tsd-kind-icon">get<wbr>Version</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="http.client.html#onbtdownloadstart" class="tsd-kind-icon">on<wbr>BtDownload<wbr>Start</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="http.client.html#ondownloadcomplete" class="tsd-kind-icon">on<wbr>Download<wbr>Complete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="http.client.html#ondownloaderror" class="tsd-kind-icon">on<wbr>Download<wbr>Error</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="http.client.html#ondownloadpause" class="tsd-kind-icon">on<wbr>Download<wbr>Pause</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="http.client.html#ondownloadstart" class="tsd-kind-icon">on<wbr>Download<wbr>Start</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="http.client.html#ondownloadstop" class="tsd-kind-icon">on<wbr>Download<wbr>Stop</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#pause" class="tsd-kind-icon">pause</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#pauseall" class="tsd-kind-icon">pause<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#purgedownloadresult" class="tsd-kind-icon">purge<wbr>Download<wbr>Result</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="http.client.html#rawcall" class="tsd-kind-icon">raw<wbr>Call</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="http.client.html#rawsend" class="tsd-kind-icon">raw<wbr>Send</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#removedownloadresult" class="tsd-kind-icon">remove<wbr>Download<wbr>Result</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="http.client.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#savesession" class="tsd-kind-icon">save<wbr>Session</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#shutdown" class="tsd-kind-icon">shutdown</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="http.client.html#tellactive" class="tsd-kind-icon">tell<wbr>Active</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="http.client.html#tellstatus" class="tsd-kind-icon">tell<wbr>Status</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="http.client.html#tellstopped" class="tsd-kind-icon">tell<wbr>Stopped</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="http.client.html#tellwaiting" class="tsd-kind-icon">tell<wbr>Waiting</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#unpause" class="tsd-kind-icon">unpause</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="http.client.html#unpauseall" class="tsd-kind-icon">unpause<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="http.client.html#when" class="tsd-kind-icon">when</a></li>
 							</ul>
 						</section>
 					</div>
@@ -165,78 +179,44 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2clientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientOptions</a><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/adapter.iaria2wsclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2WSClientOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rpc.aria2.websocket.client.html" class="tsd-signature-type" data-tsd-kind="Class">Client</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Client<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2clientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientOptions</a><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/adapter.iaria2httpclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2HttpClientOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="http.client.html" class="tsd-signature-type" data-tsd-kind="Class">Client</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L87">rpc.ts:87</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L350">rpc.ts:350</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2clientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientOptions</a><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/adapter.iaria2wsclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2WSClientOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Options for creating a client.</p>
-									</div>
+									<h5>options: <span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2clientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientOptions</a><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/adapter.iaria2httpclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2HttpClientOptions</a><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="rpc.aria2.websocket.client.html" class="tsd-signature-type" data-tsd-kind="Class">Client</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="http.client.html" class="tsd-signature-type" data-tsd-kind="Class">Client</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="events" class="tsd-anchor"></a>
-					<h3>events</h3>
-					<div class="tsd-signature tsd-kind-icon">events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol"> = ...</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L87">rpc.ts:87</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p><strong>Event Emitter</strong></p>
-						</div>
-						<p>Events:</p>
-						<ul>
-							<li>WebSocket</li>
-							<li><code>ws.open</code></li>
-							<li><code>ws.message</code></li>
-							<li><code>ws.close</code></li>
-							<li>Aria2 Notifications</li>
-							<li><code>aria2.onDownloadStart</code></li>
-							<li><code>aria2.onDownloadPause</code></li>
-							<li><code>aria2.onDownloadStop</code></li>
-							<li><code>aria2.onDownloadComplete</code></li>
-							<li><code>aria2.onDownloadError</code></li>
-							<li><code>aria2.onBtDownloadComplete</code>;</li>
-						</ul>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
 					<a name="system" class="tsd-anchor"></a>
 					<h3>system</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> system<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="rpc.aria2.websocket.systemmethods.html" class="tsd-signature-type" data-tsd-kind="Class">SystemMethods</a></li>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> system<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="adapter.aria2clientsystemmethodsbaseclass.html" class="tsd-signature-type" data-tsd-kind="Class">Aria2ClientSystemMethodsBaseClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2httpclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2HttpClientOptions</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L1006">rpc.ts:1006</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L377">rpc.ts:377</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -263,24 +243,58 @@
 									</ul>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="rpc.aria2.websocket.systemmethods.html" class="tsd-signature-type" data-tsd-kind="Class">SystemMethods</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="adapter.aria2clientsystemmethodsbaseclass.html" class="tsd-signature-type" data-tsd-kind="Class">Aria2ClientSystemMethodsBaseClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2httpclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2HttpClientOptions</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="addeventlistener" class="tsd-anchor"></a>
+					<h3>add<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Event<wbr>Listener&lt;T&gt;<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#addeventlistener">addEventListener</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/when.ts#L4">when.ts:4</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="addmetalink" class="tsd-anchor"></a>
 					<h3>add<wbr>Metalink</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">add<wbr>Metalink<span class="tsd-signature-symbol">(</span>metalink<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/adapter.iaria2clientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientOptions</a>, position<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#addmetalink">addMetalink</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L196">rpc.ts:196</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L38">adapter.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -311,17 +325,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="addtorrent" class="tsd-anchor"></a>
 					<h3>add<wbr>Torrent</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">add<wbr>Torrent<span class="tsd-signature-symbol">(</span>torrent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span>, uris<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/adapter.iaria2clientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientOptions</a>, position<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#addtorrent">addTorrent</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L970">rpc.ts:970</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L606">adapter.ts:606</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -359,17 +374,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="adduri" class="tsd-anchor"></a>
 					<h3>add<wbr>Uri</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">add<wbr>Uri<span class="tsd-signature-symbol">(</span>uris<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><a href="../modules/adapter.html#taria2clientinputoption" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientInputOption</a>, position<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#adduri">addUri</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L941">rpc.ts:941</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L583">adapter.ts:583</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -403,17 +419,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="changeglobaloption" class="tsd-anchor"></a>
 					<h3>change<wbr>Global<wbr>Option</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">change<wbr>Global<wbr>Option<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../modules/adapter.html#taria2clientinputoption" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientInputOption</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#changeglobaloption">changeGlobalOption</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L717">rpc.ts:717</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L464">adapter.ts:464</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -449,17 +466,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="changeoption" class="tsd-anchor"></a>
 					<h3>change<wbr>Option</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">change<wbr>Option<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><a href="../modules/adapter.html#taria2clientinputoption" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientInputOption</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#changeoption">changeOption</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L664">rpc.ts:664</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L422">adapter.ts:422</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -508,17 +526,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="changeposition" class="tsd-anchor"></a>
 					<h3>change<wbr>Position</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">change<wbr>Position<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, pos<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, how<span class="tsd-signature-symbol">: </span><a href="../enums/adapter.earia2changepositionhow.html" class="tsd-signature-type" data-tsd-kind="Enumeration">EAria2ChangePositionHow</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#changeposition">changePosition</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L575">rpc.ts:575</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L341">adapter.ts:341</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -551,17 +570,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="changeuri" class="tsd-anchor"></a>
 					<h3>change<wbr>Uri</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">change<wbr>Uri<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fileIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, delUris<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, addUris<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, position<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2changeuriresult" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ChangeUriResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#changeuri">changeUri</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L594">rpc.ts:594</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L359">adapter.ts:359</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -593,60 +613,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-					<a name="closeconnection" class="tsd-anchor"></a>
-					<h3>close<wbr>Connection</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">close<wbr>Connection&lt;T&gt;<span class="tsd-signature-symbol">(</span>code<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L1036">rpc.ts:1036</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Close the WebSocket Connection.</p>
-								</div>
-							</div>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> code: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Disconnect Code</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> data: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Some string</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="forcepause" class="tsd-anchor"></a>
 					<h3>force<wbr>Pause</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">force<wbr>Pause<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#forcepause">forcePause</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L263">rpc.ts:263</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L96">adapter.ts:96</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -665,17 +643,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="forcepauseall" class="tsd-anchor"></a>
 					<h3>force<wbr>Pause<wbr>All</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">force<wbr>Pause<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#forcepauseall">forcePauseAll</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L291">rpc.ts:291</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L115">adapter.ts:115</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -688,17 +667,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="forceremove" class="tsd-anchor"></a>
 					<h3>force<wbr>Remove</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">force<wbr>Remove<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#forceremove">forceRemove</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L237">rpc.ts:237</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L76">adapter.ts:76</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -717,17 +697,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="forceshutdown" class="tsd-anchor"></a>
 					<h3>force<wbr>Shutdown</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">force<wbr>Shutdown<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#forceshutdown">forceShutdown</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L886">rpc.ts:886</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L544">adapter.ts:544</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -746,17 +727,36 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="getcreateoptions" class="tsd-anchor"></a>
+					<h3>get<wbr>Create<wbr>Options</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Create<wbr>Options<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2clientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientOptions</a><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/adapter.iaria2httpclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2HttpClientOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#getcreateoptions">getCreateOptions</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L405">rpc.ts:405</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2clientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientOptions</a><span class="tsd-signature-symbol"> &amp; </span><a href="../interfaces/adapter.iaria2httpclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2HttpClientOptions</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getfiles" class="tsd-anchor"></a>
 					<h3>get<wbr>Files</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Files<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2filestatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2FileStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#getfiles">getFiles</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L382">rpc.ts:382</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L178">adapter.ts:178</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -775,17 +775,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getglobaloption" class="tsd-anchor"></a>
 					<h3>get<wbr>Global<wbr>Option</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Global<wbr>Option<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2clientinputoption" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientInputOption</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#getglobaloption">getGlobalOption</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L684">rpc.ts:684</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L436">adapter.ts:436</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -798,17 +799,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getglobalstat" class="tsd-anchor"></a>
 					<h3>get<wbr>Global<wbr>Stat</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Global<wbr>Stat<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2globalstat.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2GlobalStat</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#getglobalstat">getGlobalStat</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L735">rpc.ts:735</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L476">adapter.ts:476</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -821,17 +823,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getoption" class="tsd-anchor"></a>
 					<h3>get<wbr>Option</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Option<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2clientinputoption" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientInputOption</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#getoption">getOption</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L622">rpc.ts:622</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L381">adapter.ts:381</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -851,17 +854,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getpeers" class="tsd-anchor"></a>
 					<h3>get<wbr>Peers</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Peers<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2peersinfo.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2PeersInfo</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#getpeers">getPeers</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L397">rpc.ts:397</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L188">adapter.ts:188</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -880,17 +884,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getservers" class="tsd-anchor"></a>
 					<h3>get<wbr>Servers</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Servers<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2serversinfo" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ServersInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#getservers">getServers</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L412">rpc.ts:412</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L199">adapter.ts:199</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -909,17 +914,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getsessioninfo" class="tsd-anchor"></a>
 					<h3>get<wbr>Session<wbr>Info</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Session<wbr>Info<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2clientsessioninfo.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientSessionInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#getsessioninfo">getSessionInfo</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L922">rpc.ts:922</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L568">adapter.ts:568</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -938,17 +944,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="geturis" class="tsd-anchor"></a>
 					<h3>get<wbr>Uris</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Uris<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2uristatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2UriStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#geturis">getUris</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L369">rpc.ts:369</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L168">adapter.ts:168</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -967,17 +974,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getversion" class="tsd-anchor"></a>
 					<h3>get<wbr>Version</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Version<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2version.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2Version</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#getversion">getVersion</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L849">rpc.ts:849</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L519">adapter.ts:519</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -996,17 +1004,126 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="onbtdownloadstart" class="tsd-anchor"></a>
+					<h3>on<wbr>BtDownload<wbr>Start</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>BtDownload<wbr>Start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#onbtdownloadstart">onBtDownloadStart</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L374">rpc.ts:374</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="ondownloadcomplete" class="tsd-anchor"></a>
+					<h3>on<wbr>Download<wbr>Complete</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Download<wbr>Complete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#ondownloadcomplete">onDownloadComplete</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L368">rpc.ts:368</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="ondownloaderror" class="tsd-anchor"></a>
+					<h3>on<wbr>Download<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Download<wbr>Error<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#ondownloaderror">onDownloadError</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L371">rpc.ts:371</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="ondownloadpause" class="tsd-anchor"></a>
+					<h3>on<wbr>Download<wbr>Pause</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Download<wbr>Pause<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#ondownloadpause">onDownloadPause</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L362">rpc.ts:362</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="ondownloadstart" class="tsd-anchor"></a>
+					<h3>on<wbr>Download<wbr>Start</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Download<wbr>Start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#ondownloadstart">onDownloadStart</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L359">rpc.ts:359</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="ondownloadstop" class="tsd-anchor"></a>
+					<h3>on<wbr>Download<wbr>Stop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Download<wbr>Stop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#ondownloadstop">onDownloadStop</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L365">rpc.ts:365</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2notificationevent.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2NotificationEvent</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="pause" class="tsd-anchor"></a>
 					<h3>pause</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">pause<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#pause">pause</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L250">rpc.ts:250</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L86">adapter.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1025,17 +1142,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="pauseall" class="tsd-anchor"></a>
 					<h3>pause<wbr>All</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">pause<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#pauseall">pauseAll</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L277">rpc.ts:277</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L107">adapter.ts:107</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1048,17 +1166,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="purgedownloadresult" class="tsd-anchor"></a>
 					<h3>purge<wbr>Download<wbr>Result</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">purge<wbr>Download<wbr>Result<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#purgedownloadresult">purgeDownloadResult</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L748">rpc.ts:748</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L484">adapter.ts:484</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1071,30 +1190,20 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
 					<a name="rawcall" class="tsd-anchor"></a>
 					<h3>raw<wbr>Call</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">raw<wbr>Call&lt;T, R&gt;<span class="tsd-signature-symbol">(</span>methods<span class="tsd-signature-symbol">: </span><a href="../modules/adapter.html#taria2methodnames" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2MethodNames</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">raw<wbr>Call&lt;T, R&gt;<span class="tsd-signature-symbol">(</span>methods<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#rawcall">rawCall</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L1019">rpc.ts:1019</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L380">rpc.ts:380</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p><strong>[Unsafe]</strong>  Call any method with any params.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-ts"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">rawCall</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.getVersion&#039;</span><span style="color: #000000">);</span>
-</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -1107,10 +1216,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>methods: <a href="../modules/adapter.html#taria2methodnames" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2MethodNames</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The RPC Method.</p>
-									</div>
+									<h5>methods: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
@@ -1120,17 +1226,48 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+					<a name="rawsend" class="tsd-anchor"></a>
+					<h3>raw<wbr>Send</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">raw<wbr>Send&lt;T&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#rawsend">rawSend</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/rpc.ts#L402">rpc.ts:402</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="remove" class="tsd-anchor"></a>
 					<h3>remove</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L224">rpc.ts:224</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L66">adapter.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1156,17 +1293,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="removedownloadresult" class="tsd-anchor"></a>
 					<h3>remove<wbr>Download<wbr>Result</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">remove<wbr>Download<wbr>Result<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#removedownloadresult">removeDownloadResult</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L769">rpc.ts:769</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L501">adapter.ts:501</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1192,17 +1330,51 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="removeeventlistener" class="tsd-anchor"></a>
+					<h3>remove<wbr>Event<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Event<wbr>Listener&lt;T&gt;<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#removeeventlistener">removeEventListener</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/when.ts#L41">when.ts:41</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>listener: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="savesession" class="tsd-anchor"></a>
 					<h3>save<wbr>Session</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">save<wbr>Session<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#savesession">saveSession</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L904">rpc.ts:904</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L556">adapter.ts:556</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1221,17 +1393,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="shutdown" class="tsd-anchor"></a>
 					<h3>shutdown</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">shutdown<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#shutdown">shutdown</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L868">rpc.ts:868</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L532">adapter.ts:532</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1250,18 +1423,19 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 					<a name="tellactive" class="tsd-anchor"></a>
 					<h3>tell<wbr>Active</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">tell<wbr>Active&lt;T&gt;<span class="tsd-signature-symbol">(</span>keys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2downloadstatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2DownloadStatus</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 						<li class="tsd-signature tsd-kind-icon">tell<wbr>Active<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2downloadstatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2DownloadStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#tellactive">tellActive</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L429">rpc.ts:429</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L211">adapter.ts:211</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1272,7 +1446,7 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;gid&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;status&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;totalLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;completedLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bitfield&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;downloadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;infoHash&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numSeeders&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeder&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pieceLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numPieces&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;connections&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorCode&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorMessage&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followedBy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;following&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;belongsTo&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dir&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;files&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bittorrent&quot;</span></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;dir&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gid&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;status&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;totalLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;completedLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bitfield&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;downloadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;infoHash&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numSeeders&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeder&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pieceLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numPieces&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;connections&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorCode&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorMessage&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followedBy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;following&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;belongsTo&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;files&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bittorrent&quot;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1286,26 +1460,28 @@
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#tellactive">tellActive</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L432">rpc.ts:432</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L214">adapter.ts:214</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2downloadstatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2DownloadStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 					<a name="tellstatus" class="tsd-anchor"></a>
 					<h3>tell<wbr>Status</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">tell<wbr>Status<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2downloadstatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2DownloadStatus</a><span class="tsd-signature-symbol">&gt;</span></li>
 						<li class="tsd-signature tsd-kind-icon">tell<wbr>Status&lt;T&gt;<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, keys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2downloadstatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2DownloadStatus</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#tellstatus">tellStatus</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L330">rpc.ts:330</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L141">adapter.ts:141</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1324,14 +1500,15 @@
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#tellstatus">tellStatus</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L333">rpc.ts:333</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L142">adapter.ts:142</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;gid&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;status&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;totalLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;completedLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bitfield&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;downloadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;infoHash&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numSeeders&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeder&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pieceLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numPieces&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;connections&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorCode&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorMessage&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followedBy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;following&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;belongsTo&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dir&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;files&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bittorrent&quot;</span></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;dir&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gid&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;status&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;totalLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;completedLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bitfield&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;downloadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;infoHash&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numSeeders&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeder&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pieceLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numPieces&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;connections&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorCode&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorMessage&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followedBy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;following&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;belongsTo&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;files&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bittorrent&quot;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1347,18 +1524,19 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 					<a name="tellstopped" class="tsd-anchor"></a>
 					<h3>tell<wbr>Stopped</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">tell<wbr>Stopped<span class="tsd-signature-symbol">(</span>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2downloadstatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2DownloadStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 						<li class="tsd-signature tsd-kind-icon">tell<wbr>Stopped&lt;T&gt;<span class="tsd-signature-symbol">(</span>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, keys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2downloadstatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2DownloadStatus</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#tellstopped">tellStopped</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L522">rpc.ts:522</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L293">adapter.ts:293</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1382,14 +1560,15 @@
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#tellstopped">tellStopped</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L526">rpc.ts:526</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L297">adapter.ts:297</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;gid&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;status&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;totalLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;completedLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bitfield&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;downloadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;infoHash&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numSeeders&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeder&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pieceLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numPieces&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;connections&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorCode&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorMessage&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followedBy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;following&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;belongsTo&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dir&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;files&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bittorrent&quot;</span></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;dir&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gid&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;status&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;totalLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;completedLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bitfield&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;downloadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;infoHash&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numSeeders&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeder&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pieceLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numPieces&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;connections&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorCode&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorMessage&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followedBy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;following&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;belongsTo&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;files&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bittorrent&quot;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1408,18 +1587,19 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 					<a name="tellwaiting" class="tsd-anchor"></a>
 					<h3>tell<wbr>Waiting</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">tell<wbr>Waiting<span class="tsd-signature-symbol">(</span>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2downloadstatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2DownloadStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 						<li class="tsd-signature tsd-kind-icon">tell<wbr>Waiting&lt;T&gt;<span class="tsd-signature-symbol">(</span>offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, keys<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2downloadstatus.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2DownloadStatus</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#tellwaiting">tellWaiting</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L472">rpc.ts:472</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L248">adapter.ts:248</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1445,14 +1625,15 @@
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#tellwaiting">tellWaiting</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L476">rpc.ts:476</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L252">adapter.ts:252</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;gid&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;status&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;totalLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;completedLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bitfield&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;downloadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;infoHash&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numSeeders&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeder&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pieceLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numPieces&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;connections&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorCode&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorMessage&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followedBy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;following&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;belongsTo&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dir&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;files&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bittorrent&quot;</span></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;dir&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gid&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;status&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;totalLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;completedLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bitfield&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;downloadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;uploadSpeed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;infoHash&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numSeeders&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeder&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pieceLength&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;numPieces&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;connections&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorCode&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;errorMessage&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;followedBy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;following&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;belongsTo&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;files&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bittorrent&quot;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1471,17 +1652,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="unpause" class="tsd-anchor"></a>
 					<h3>unpause</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">unpause<span class="tsd-signature-symbol">(</span>gid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#unpause">unpause</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L304">rpc.ts:304</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L124">adapter.ts:124</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1500,17 +1682,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="unpauseall" class="tsd-anchor"></a>
 					<h3>unpause<wbr>All</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">unpause<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#unpauseall">unpauseAll</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/30c7e94/src/rpc.ts#L317">rpc.ts:317</a></li>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/adapter.ts#L134">adapter.ts:134</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1520,6 +1703,36 @@
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>TAria2PauseAllResult</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="when" class="tsd-anchor"></a>
+					<h3>when</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">when&lt;T&gt;<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="adapter.aria2clientbaseclass.html">Aria2ClientBaseClass</a>.<a href="adapter.aria2clientbaseclass.html#when">when</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/afc0123/src/when.ts#L60">when.ts:60</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1534,17 +1747,11 @@
 					<li class=" tsd-kind-namespace">
 						<a href="../modules/adapter.html">Adapter</a>
 					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/http.html">Http</a>
+					</li>
 					<li class=" tsd-kind-namespace">
-						<a href="../modules/rpc.html">Rpc</a>
-					</li>
-					<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
-						<a href="../modules/rpc.aria2.html">Rpc.<wbr>Aria2</a>
-					</li>
-					<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
-						<a href="../modules/rpc.aria2.http.html">Rpc.<wbr>Aria2.<wbr>Http</a>
-					</li>
-					<li class="current tsd-kind-namespace tsd-parent-kind-namespace">
-						<a href="../modules/rpc.aria2.websocket.html">Rpc.<wbr>Aria2.<wbr>Web<wbr>Socket</a>
+						<a href="../modules/websocket.html">Web<wbr>Socket</a>
 					</li>
 				</ul>
 			</nav>
@@ -1553,128 +1760,155 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-namespace">
-						<a href="rpc.aria2.websocket.client.html" class="tsd-kind-icon">Client</a>
+						<a href="http.client.html" class="tsd-kind-icon">Client</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#events" class="tsd-kind-icon">events</a>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#system" class="tsd-kind-icon">system</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#system" class="tsd-kind-icon">system</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="http.client.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#addmetalink" class="tsd-kind-icon">add<wbr>Metalink</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#addmetalink" class="tsd-kind-icon">add<wbr>Metalink</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#addtorrent" class="tsd-kind-icon">add<wbr>Torrent</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#addtorrent" class="tsd-kind-icon">add<wbr>Torrent</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#adduri" class="tsd-kind-icon">add<wbr>Uri</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#adduri" class="tsd-kind-icon">add<wbr>Uri</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#changeglobaloption" class="tsd-kind-icon">change<wbr>Global<wbr>Option</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#changeglobaloption" class="tsd-kind-icon">change<wbr>Global<wbr>Option</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#changeoption" class="tsd-kind-icon">change<wbr>Option</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#changeoption" class="tsd-kind-icon">change<wbr>Option</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#changeposition" class="tsd-kind-icon">change<wbr>Position</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#changeposition" class="tsd-kind-icon">change<wbr>Position</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#changeuri" class="tsd-kind-icon">change<wbr>Uri</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#changeuri" class="tsd-kind-icon">change<wbr>Uri</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-								<a href="rpc.aria2.websocket.client.html#closeconnection" class="tsd-kind-icon">close<wbr>Connection</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#forcepause" class="tsd-kind-icon">force<wbr>Pause</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#forcepause" class="tsd-kind-icon">force<wbr>Pause</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#forcepauseall" class="tsd-kind-icon">force<wbr>Pause<wbr>All</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#forcepauseall" class="tsd-kind-icon">force<wbr>Pause<wbr>All</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#forceremove" class="tsd-kind-icon">force<wbr>Remove</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#forceremove" class="tsd-kind-icon">force<wbr>Remove</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#forceshutdown" class="tsd-kind-icon">force<wbr>Shutdown</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#forceshutdown" class="tsd-kind-icon">force<wbr>Shutdown</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="http.client.html#getcreateoptions" class="tsd-kind-icon">get<wbr>Create<wbr>Options</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#getfiles" class="tsd-kind-icon">get<wbr>Files</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#getfiles" class="tsd-kind-icon">get<wbr>Files</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#getglobaloption" class="tsd-kind-icon">get<wbr>Global<wbr>Option</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#getglobaloption" class="tsd-kind-icon">get<wbr>Global<wbr>Option</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#getglobalstat" class="tsd-kind-icon">get<wbr>Global<wbr>Stat</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#getglobalstat" class="tsd-kind-icon">get<wbr>Global<wbr>Stat</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#getoption" class="tsd-kind-icon">get<wbr>Option</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#getoption" class="tsd-kind-icon">get<wbr>Option</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#getpeers" class="tsd-kind-icon">get<wbr>Peers</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#getpeers" class="tsd-kind-icon">get<wbr>Peers</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#getservers" class="tsd-kind-icon">get<wbr>Servers</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#getservers" class="tsd-kind-icon">get<wbr>Servers</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#getsessioninfo" class="tsd-kind-icon">get<wbr>Session<wbr>Info</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#getsessioninfo" class="tsd-kind-icon">get<wbr>Session<wbr>Info</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#geturis" class="tsd-kind-icon">get<wbr>Uris</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#geturis" class="tsd-kind-icon">get<wbr>Uris</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#getversion" class="tsd-kind-icon">get<wbr>Version</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#getversion" class="tsd-kind-icon">get<wbr>Version</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#pause" class="tsd-kind-icon">pause</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="http.client.html#onbtdownloadstart" class="tsd-kind-icon">on<wbr>BtDownload<wbr>Start</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#pauseall" class="tsd-kind-icon">pause<wbr>All</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="http.client.html#ondownloadcomplete" class="tsd-kind-icon">on<wbr>Download<wbr>Complete</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#purgedownloadresult" class="tsd-kind-icon">purge<wbr>Download<wbr>Result</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="http.client.html#ondownloaderror" class="tsd-kind-icon">on<wbr>Download<wbr>Error</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-								<a href="rpc.aria2.websocket.client.html#rawcall" class="tsd-kind-icon">raw<wbr>Call</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="http.client.html#ondownloadpause" class="tsd-kind-icon">on<wbr>Download<wbr>Pause</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#remove" class="tsd-kind-icon">remove</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="http.client.html#ondownloadstart" class="tsd-kind-icon">on<wbr>Download<wbr>Start</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#removedownloadresult" class="tsd-kind-icon">remove<wbr>Download<wbr>Result</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="http.client.html#ondownloadstop" class="tsd-kind-icon">on<wbr>Download<wbr>Stop</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#savesession" class="tsd-kind-icon">save<wbr>Session</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#pause" class="tsd-kind-icon">pause</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#shutdown" class="tsd-kind-icon">shutdown</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#pauseall" class="tsd-kind-icon">pause<wbr>All</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-								<a href="rpc.aria2.websocket.client.html#tellactive" class="tsd-kind-icon">tell<wbr>Active</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#purgedownloadresult" class="tsd-kind-icon">purge<wbr>Download<wbr>Result</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-								<a href="rpc.aria2.websocket.client.html#tellstatus" class="tsd-kind-icon">tell<wbr>Status</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+								<a href="http.client.html#rawcall" class="tsd-kind-icon">raw<wbr>Call</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-								<a href="rpc.aria2.websocket.client.html#tellstopped" class="tsd-kind-icon">tell<wbr>Stopped</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+								<a href="http.client.html#rawsend" class="tsd-kind-icon">raw<wbr>Send</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-								<a href="rpc.aria2.websocket.client.html#tellwaiting" class="tsd-kind-icon">tell<wbr>Waiting</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#remove" class="tsd-kind-icon">remove</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#unpause" class="tsd-kind-icon">unpause</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#removedownloadresult" class="tsd-kind-icon">remove<wbr>Download<wbr>Result</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="rpc.aria2.websocket.client.html#unpauseall" class="tsd-kind-icon">unpause<wbr>All</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="http.client.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#savesession" class="tsd-kind-icon">save<wbr>Session</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#shutdown" class="tsd-kind-icon">shutdown</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="http.client.html#tellactive" class="tsd-kind-icon">tell<wbr>Active</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="http.client.html#tellstatus" class="tsd-kind-icon">tell<wbr>Status</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="http.client.html#tellstopped" class="tsd-kind-icon">tell<wbr>Stopped</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="http.client.html#tellwaiting" class="tsd-kind-icon">tell<wbr>Waiting</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#unpause" class="tsd-kind-icon">unpause</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="http.client.html#unpauseall" class="tsd-kind-icon">unpause<wbr>All</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="http.client.html#when" class="tsd-kind-icon">when</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-parent-kind-namespace">
-						<a href="rpc.aria2.websocket.systemmethods.html" class="tsd-kind-icon">System<wbr>Methods</a>
+						<a href="http.systemmethods.html" class="tsd-kind-icon">System<wbr>Methods</a>
 					</li>
 				</ul>
 			</nav>
@@ -1686,8 +1920,10 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 		</div>

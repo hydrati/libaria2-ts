@@ -1,3 +1,3 @@
-import { WebSocket, Http } from "./rpc";
+import { RpcWebSocket, RpcHttp } from "./rpc";
 import * as Adapter from "./adapter";
-export { WebSocket, Http, Adapter };
+export { RpcWebSocket as WebSocket, RpcHttp as Http, Adapter };

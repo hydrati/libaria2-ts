@@ -38,7 +38,7 @@ import {
   IAria2HttpClientOptions,
 } from "./adapter";
 
-export namespace WebSocket {
+export namespace RpcWebSocket {
   /**
    * ### Aria2 WebSocket Client
    *
@@ -71,13 +71,7 @@ export namespace WebSocket {
     protected $openCallbacks: Array<() => void> = [];
     /** @ignore */
     protected $opened = false;
-    /**
 
-       */
-    /**
-     * @constructor
-     * @param options Options for creating a client.
-     */
     constructor(
       options: Readonly<IAria2ClientOptions & IAria2WSClientOptions>
     ) {
@@ -333,13 +327,28 @@ export namespace WebSocket {
     }
   }
 }
-export namespace Http {
+export namespace RpcHttp {
   /**
    * ### Aria2 Http Client
+   *    **Events**
+   *  - WebSocket
+   *    * `ws.open`
+   *    * `ws.message`
+   *    * `ws.close`
+   *  - Aria2 Notifications
+   *    * `aria2.onDownloadStart`
+   *    * `aria2.onDownloadPause`
+   *    * `aria2.onDownloadStop`
+   *    * `aria2.onDownloadComplete`
+   *    * `aria2.onDownloadError`
+   *    * `aria2.onBtDownloadComplete`;
    */
   export class Client extends Aria2ClientBaseClass<IAria2HttpClientOptions> {
+    /** @ignore */
     protected $options: IAria2ClientOptions & IAria2HttpClientOptions;
+    /** @ignore */
     protected $system: SystemMethods;
+
     constructor(
       options: Readonly<IAria2ClientOptions & IAria2HttpClientOptions>
     ) {
