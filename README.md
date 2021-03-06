@@ -50,10 +50,14 @@ aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all
 
 ### Create client
 ```ts
-import { WebSocketClient as Aria2 } from 'libaria2-ts';
-const aria2 = new Aria2({
-  // Your Options...
-});
+import { WebSocket as Aria2WebSocket } from "libaria2-ts";
+// or 
+//     import { Http as Aria2Http } from "libaria2-ts";
+
+const aria2 = new Aria2WebSocket({...});
+// or
+//     const aria2 = new Aria2Http({...});
+
 ```
 
 Example options
@@ -80,6 +84,10 @@ const resl = await aria2.system.multicall(
   { methodName: 'aria2.getVersion', params: [] },
   { methodName: 'aria2.addUri', params: ['http://example.com/qwer.zip'] }
 );
+/*
+ * Output:
+ * Array<Promise<...>>
+ */
 
 let event = await aria2.when('aria2.onDownloadStart');
 console.log(`Download ${event.gid} Started`);
@@ -94,16 +102,21 @@ aria2.addEventListener('aria2.onDownloadStart', (event: IAria2NotificationEvent)
   console.log(`Download ${event.gid} Started`);
 });
 
+// or:
+aria2.onDownloadStart().then((event: IAria2NotificationEvent) => {
+  console.log(`Download ${event.gid} Started`);
+}));
 
-await aria2.shutdown();
-// Output: "OK"
+
+
+await aria2.closeConnection();
 
 ```
 
-Methods, see [Aria2ClientBaseClient](./classes/adapter.aria2clientbaseclass.html)
+More methods, see [Aria2ClientBaseClient](./classes/adapter.aria2clientbaseclass.html)
 
 ## License
-```
+```plaintext
 MIT License
 
 Copyright (c) 2021 Oxygen

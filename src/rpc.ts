@@ -117,36 +117,42 @@ export namespace RpcWebSocket {
               case "aria2.onDownloadStart":
                 this.emit(
                   "aria2.onDownloadStart",
+                  {},
                   ...((<IJsonRPCRequest>message).params ?? [])
                 );
                 break;
               case "aria2.onDownloadPause":
                 this.emit(
                   "aria2.onDownloadPause",
+                  {},
                   ...((<IJsonRPCRequest>message).params ?? [])
                 );
                 break;
               case "aria2.onDownloadStop":
                 this.emit(
                   "aria2.onDownloadStop",
+                  {},
                   ...((<IJsonRPCRequest>message).params ?? [])
                 );
                 break;
               case "aria2.onDownloadComplete":
                 this.emit(
                   "aria2.onDownloadComplete",
+                  {},
                   ...((<IJsonRPCRequest>message).params ?? [])
                 );
                 break;
               case "aria2.onDownloadError":
                 this.emit(
                   "aria2.onDownloadError",
+                  {},
                   ...((<IJsonRPCRequest>message).params ?? [])
                 );
                 break;
               case "aria2.onBtDownloadComplete":
                 this.emit(
                   "aria2.onBtDownloadComplete",
+                  {},
                   ...((<IJsonRPCRequest>message).params ?? [])
                 );
                 break;
