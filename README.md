@@ -1,5 +1,3 @@
-**(note: This package is still under development, please don't use it in a production environment.)**
-
 # [libaria2.ts](https://www.npmjs.com/package/libaria2-ts)
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/libaria2-ts?label=size&style=for-the-badge)

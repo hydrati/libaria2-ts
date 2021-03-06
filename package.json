@@ -1,6 +1,6 @@
 {
     "name": "libaria2-ts",
-    "version": "1.0.610",
+    "version": "1.0.7",
     "description": "A full-typing wrapper around `aria2`, `The next generation download utility`.",
     "repository": "https://github.com/im-oxygen/libaria2-ts",
     "homepage": "https://im-oxygen.github.io/libaria2-ts/",
