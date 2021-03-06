@@ -893,7 +893,7 @@ export interface IJsonRPCResponse {
 
 export interface IAria2Version {
   /** List of enabled features. Each feature is given as a string. */
-  enableFeatures: string[];
+  enabledFeatures: string[];
   /** Version number of aria2 as a string. */
   version: string;
 }

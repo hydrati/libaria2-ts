@@ -77,7 +77,7 @@ Example options
 let ver = await aria2.getVersion();
 /*
  * Output:
- * { version: '...', enableFeatues: [...] }
+ * { version: '...', enabledFeatues: [...] }
  */
 
 const resl = await aria2.system.multicall(
