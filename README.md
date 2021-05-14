@@ -113,7 +113,7 @@ await aria2.closeConnection();
 
 ```
 
-More methods, see [Aria2ClientBaseClient](./classes/adapter.aria2clientbaseclass.html)
+More methods, see [Aria2ClientBaseClient](https://im-oxygen.github.io/libaria2-ts/classes/adapter.aria2clientbaseclass.html)
 
 ## License
 ```
