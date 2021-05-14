@@ -53,6 +53,7 @@
         "eslint-plugin-import": "2.22.1",
         "eslint-plugin-node": "11.1.0",
         "eslint-plugin-promise": "4.2.1",
+        "hosted-git-info": "^4.0.2",
         "rollup": "^2.40.0",
         "rollup-plugin-dts": "^2.0.1",
         "rollup-plugin-terser": "^7.0.2",
