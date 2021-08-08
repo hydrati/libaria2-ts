@@ -178,7 +178,7 @@ export abstract class Aria2ClientBaseClass<T> extends When {
    */
   public async getFiles(gid: TAria2ClientGID): Promise<IAria2FileStatus[]> {
     return await this.rawCall<TAria2ClientGID, IAria2FileStatus[]>(
-      "aria2.getUris",
+      "aria2.getFiles",
       gid
     );
   }
@@ -199,7 +199,7 @@ export abstract class Aria2ClientBaseClass<T> extends When {
    */
   public async getServers(gid: TAria2ClientGID): Promise<TAria2ServersInfo> {
     let resp = await this.rawCall<TAria2ClientGID, unknown[]>(
-      "aria2.getPeers",
+      "aria2.getServers",
       gid
     );
 
