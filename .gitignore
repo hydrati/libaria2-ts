@@ -2,3 +2,7 @@ node_modules
 types
 .ghtoken
 yarn-error.log
+types
+*.log
+cache
+temp
