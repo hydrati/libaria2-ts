@@ -55,10 +55,10 @@
 					<a href="../modules.html">libaria2-ts</a>
 				</li>
 				<li>
-					<a href="../modules/http.html">Http</a>
+					<a href="../modules/Http.html">Http</a>
 				</li>
 				<li>
-					<a href="http.systemmethods.html">SystemMethods</a>
+					<a href="Http.SystemMethods.html">SystemMethods</a>
 				</li>
 			</ul>
 			<h1>Class SystemMethods</h1>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="adapter.aria2clientsystemmethodsbaseclass.html" class="tsd-signature-type" data-tsd-kind="Class">Aria2ClientSystemMethodsBaseClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/adapter.iaria2httpclientoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2HttpClientOptions</a><span class="tsd-signature-symbol">&gt;</span>
+						<a href="Adapter.Aria2ClientSystemMethodsBaseClass.html" class="tsd-signature-type" data-tsd-kind="Class">Aria2ClientSystemMethodsBaseClass</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/Adapter.IAria2HttpClientOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2HttpClientOptions</a><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">SystemMethods</span>
@@ -88,9 +88,9 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="http.systemmethods.html#listmethods" class="tsd-kind-icon">list<wbr>Methods</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="http.systemmethods.html#listnotifications" class="tsd-kind-icon">list<wbr>Notifications</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="http.systemmethods.html#multicall" class="tsd-kind-icon">multicall</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="Http.SystemMethods.html#listMethods" class="tsd-kind-icon">list<wbr>Methods</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="Http.SystemMethods.html#listNotifications" class="tsd-kind-icon">list<wbr>Notifications</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="Http.SystemMethods.html#multicall" class="tsd-kind-icon">multicall</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,38 +99,48 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-					<a name="listmethods" class="tsd-anchor"></a>
+					<a name="listMethods" class="tsd-anchor"></a>
 					<h3>list<wbr>Methods</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Methods<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2clientmethodlist" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientMethodList</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Methods<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/Adapter.html#TAria2ClientMethodList" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientMethodList</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="adapter.aria2clientsystemmethodsbaseclass.html">Aria2ClientSystemMethodsBaseClass</a>.<a href="adapter.aria2clientsystemmethodsbaseclass.html#listmethods">listMethods</a></p>
+								<p>Overrides <a href="Adapter.Aria2ClientSystemMethodsBaseClass.html">Aria2ClientSystemMethodsBaseClass</a>.<a href="Adapter.Aria2ClientSystemMethodsBaseClass.html#listMethods">listMethods</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/dbaa706/src/rpc.ts#L435">rpc.ts:435</a></li>
+									<li>Defined in <a href="https://github.com/hyroge/libaria2-ts/blob/ecc8f78/src/rpc.ts#L434">src/rpc.ts:434</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2clientmethodlist" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientMethodList</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This method returns all the available RPC methods in an array of string. Unlike other methods, this method does not require secret token. This is safe because this method just returns the available method names.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/Adapter.html#TAria2ClientMethodList" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientMethodList</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-					<a name="listnotifications" class="tsd-anchor"></a>
+					<a name="listNotifications" class="tsd-anchor"></a>
 					<h3>list<wbr>Notifications</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Notifications<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2clientnotificationlist" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientNotificationList</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Notifications<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/Adapter.html#TAria2ClientNotificationList" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientNotificationList</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="adapter.aria2clientsystemmethodsbaseclass.html">Aria2ClientSystemMethodsBaseClass</a>.<a href="adapter.aria2clientsystemmethodsbaseclass.html#listnotifications">listNotifications</a></p>
+								<p>Overrides <a href="Adapter.Aria2ClientSystemMethodsBaseClass.html">Aria2ClientSystemMethodsBaseClass</a>.<a href="Adapter.Aria2ClientSystemMethodsBaseClass.html#listNotifications">listNotifications</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/dbaa706/src/rpc.ts#L440">rpc.ts:440</a></li>
+									<li>Defined in <a href="https://github.com/hyroge/libaria2-ts/blob/ecc8f78/src/rpc.ts#L439">src/rpc.ts:439</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2clientnotificationlist" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientNotificationList</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This method returns all the available RPC notifications in an array of string. Unlike other methods, this method does not require secret token. This is safe because this method just returns the available notifications names.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/Adapter.html#TAria2ClientNotificationList" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientNotificationList</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -138,16 +148,21 @@
 					<a name="multicall" class="tsd-anchor"></a>
 					<h3>multicall</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">multicall&lt;T0, T1&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>items<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">readonly </span><a href="../interfaces/adapter.iaria2clientmulticallitem.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientMulticallItem</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T0</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2clientmulticallresult" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientMulticallResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">multicall&lt;T0, T1&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>items<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">readonly </span><a href="../interfaces/Adapter.IAria2ClientMulticallItem.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientMulticallItem</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T0</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/Adapter.html#TAria2ClientMulticallResult" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientMulticallResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="adapter.aria2clientsystemmethodsbaseclass.html">Aria2ClientSystemMethodsBaseClass</a>.<a href="adapter.aria2clientsystemmethodsbaseclass.html#multicall">multicall</a></p>
+								<p>Overrides <a href="Adapter.Aria2ClientSystemMethodsBaseClass.html">Aria2ClientSystemMethodsBaseClass</a>.<a href="Adapter.Aria2ClientSystemMethodsBaseClass.html#multicall">multicall</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/im-oxygen/libaria2-ts/blob/dbaa706/src/rpc.ts#L392">rpc.ts:392</a></li>
+									<li>Defined in <a href="https://github.com/hyroge/libaria2-ts/blob/ecc8f78/src/rpc.ts#L391">src/rpc.ts:391</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This methods encapsulates multiple method calls in a single request. methods is an array of structs. The structs contain two keys: <code>methodName</code> and <code>params</code>. <code>methodName</code> is the method name to call and <code>params</code> is array containing parameters to the method call. This method returns an array of responses. The elements will be either a one-item array containing the return value of the method call or a struct of fault element if an encapsulated method call fails.</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -160,10 +175,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>items: <span class="tsd-signature-symbol">readonly </span><a href="../interfaces/adapter.iaria2clientmulticallitem.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientMulticallItem</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T0</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>items: <span class="tsd-signature-symbol">readonly </span><a href="../interfaces/Adapter.IAria2ClientMulticallItem.html" class="tsd-signature-type" data-tsd-kind="Interface">IAria2ClientMulticallItem</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T0</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/adapter.html#taria2clientmulticallresult" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientMulticallResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/Adapter.html#TAria2ClientMulticallResult" class="tsd-signature-type" data-tsd-kind="Type alias">TAria2ClientMulticallResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -176,34 +191,34 @@
 						<a href="../modules.html">Exports</a>
 					</li>
 					<li class=" tsd-kind-namespace">
-						<a href="../modules/adapter.html">Adapter</a>
+						<a href="../modules/Adapter.html">Adapter</a>
 					</li>
 					<li class="current tsd-kind-namespace">
-						<a href="../modules/http.html">Http</a>
+						<a href="../modules/Http.html">Http</a>
 					</li>
 					<li class=" tsd-kind-namespace">
-						<a href="../modules/websocket.html">Web<wbr>Socket</a>
+						<a href="../modules/WebSocket.html">Web<wbr>Socket</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-namespace">
-						<a href="http.client.html" class="tsd-kind-icon">Client</a>
+						<a href="Http.Client.html" class="tsd-kind-icon">Client</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-namespace">
-						<a href="http.systemmethods.html" class="tsd-kind-icon">System<wbr>Methods</a>
+						<a href="Http.SystemMethods.html" class="tsd-kind-icon">System<wbr>Methods</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="http.systemmethods.html#listmethods" class="tsd-kind-icon">list<wbr>Methods</a>
+								<a href="Http.SystemMethods.html#listMethods" class="tsd-kind-icon">list<wbr>Methods</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="http.systemmethods.html#listnotifications" class="tsd-kind-icon">list<wbr>Notifications</a>
+								<a href="Http.SystemMethods.html#listNotifications" class="tsd-kind-icon">list<wbr>Notifications</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
-								<a href="http.systemmethods.html#multicall" class="tsd-kind-icon">multicall</a>
+								<a href="Http.SystemMethods.html#multicall" class="tsd-kind-icon">multicall</a>
 							</li>
 						</ul>
 					</li>
