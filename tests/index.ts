@@ -11,8 +11,7 @@ import { WebSocket as Aria2WebSocket } from "../src/lib";
     "https://sharepoint.latest10.win/19042.804/19042.804.210131-1457.VB_RELEASE_SVC_PROD1_CLIENTMULTI_X64FRE_ZH-CN.ISO"
   );
   console.log("added", gid1);
-
-  client1.onDownloadStart().then((event) => {
+  client1.onceDownloadStart().then((event) => {
     console.log("dl started,", this, event);
   });
   client1.closeConnection();
