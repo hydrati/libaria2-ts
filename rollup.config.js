@@ -3,23 +3,27 @@ import babel from '@rollup/plugin-babel';
 import node from '@rollup/plugin-node-resolve';
 import path from 'path';
 import json from '@rollup/plugin-json';
+import terser from 'rollup-plugin-terser';
 import cjs from '@rollup/plugin-commonjs';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 export default [{
     input: path.resolve(__dirname, 'src', 'lib.ts'),
     plugins: [node({
             browser: true,
+            preferBuiltins: false
         }), cjs({ sourceMap: true }), ts({
-            tsconfig: path.resolve(__dirname, 'tsconfig.json')
+            tsconfig: path.resolve(__dirname, 'tsconfig.json'),
+            useTsconfigDeclarationDir: false,
         }), json({ compact: true }), babel({
             presets: ['@babel/env', {
                 exclude: [
-                    "transform-async-to-generator",
-                    "transform-regenerator",
+                    // "transform-async-to-generator",
+                    // "transform-regenerator",
                 ]
             }],
             plugins: [
-                // '@babel/transform-runtime'
+
+                "@babel/plugin-syntax-class-properties"
             ],
             extensions: [
                 ...DEFAULT_EXTENSIONS,
@@ -28,16 +32,17 @@ export default [{
             ],
             babelHelpers: 'bundled'
         }),
-        //  terser.terser({
-        //     mangle: true,
-        // })
+        terser.terser({
+            mangle: true,
+        })
     ],
     external: [
         'buffer',
         'ws',
         'http',
         'https',
-        'net', 'buffer',
+        'net', 
+        'buffer',
         'crypto'
     ],
 
@@ -56,12 +61,13 @@ export default [{
         }), json({ compact: true }), babel({
             presets: ['@babel/env', {
                 exclude: [
-                    "transform-async-to-generator",
-                    "transform-regenerator",
+                    // "transform-async-to-generator",
+                    // "transform-regenerator",
+                    
                 ]
             }],
             plugins: [
-                // '@babel/transform-runtime'
+                "@babel/plugin-syntax-class-properties"
             ],
             extensions: [
                 ...DEFAULT_EXTENSIONS,
@@ -70,9 +76,9 @@ export default [{
             ],
             babelHelpers: 'bundled'
         }),
-        //  terser.terser({
-        //     mangle: true,
-        // }),
+         terser.terser({
+            mangle: true,
+        }),
 
     ],
     external: [
@@ -82,7 +88,8 @@ export default [{
         'https',
         'net',
         'buffer',
-        'crypto'
+        'crypto',
+        'events',
     ],
     output: [
         { file: "dist/libaria2.node.esm.js", format: "es" },
