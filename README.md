@@ -89,21 +89,13 @@ const resl = await aria2.system.multicall(
  * Array<Promise<...>>
  */
 
-let event = await aria2.when('aria2.onDownloadStart');
-console.log(`Download ${event.gid} Started`);
-
 // or:
-aria2.when('aria2.onDownloadStart').then((event: IAria2NotificationEvent) => {
-  console.log(`Download ${event.gid} Started`);
-})
-
-// or:
-aria2.addEventListener('aria2.onDownloadStart', (event: IAria2NotificationEvent) => {
+aria2.on('aria2.onDownloadStart', (event: IAria2NotificationEvent) => {
   console.log(`Download ${event.gid} Started`);
 });
 
 // or:
-aria2.onDownloadStart().then((event: IAria2NotificationEvent) => {
+aria2.onceDownloadStart().then((event: IAria2NotificationEvent) => {
   console.log(`Download ${event.gid} Started`);
 }));
 
@@ -113,7 +105,7 @@ await aria2.closeConnection();
 
 ```
 
-More methods, see [Aria2ClientBaseClient](https://im-oxygen.github.io/libaria2-ts/classes/adapter.aria2clientbaseclass.html)
+More methods, see [Aria2ClientBaseClient](https://hyroge.github.io/libaria2-ts/classes/adapter.aria2clientbaseclass.html)
 
 ## License
 ```
