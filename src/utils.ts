@@ -7,16 +7,7 @@ export namespace Base64 {
   }
 }
 export const isNode = () => {
-  if (globalThis.process == undefined) {
-    return false;
-  } else if (globalThis.process["versions"] == undefined) {
-    return false;
-  } else if (
-    globalThis.process["versions"]["node"] == undefined &&
-    typeof globalThis.process["versions"]["node"] != "string"
-  ) {
-    return false;
-  } else {
+  if (typeof globalThis?.process?.versions?.node == "string") {
     return true;
-  }
+  } else return false;
 };
