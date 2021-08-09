@@ -4,4 +4,6 @@ yarn.lock
 yarn-error.log
 tsconfig.json
 docs
+temp
+tests
 rollup*

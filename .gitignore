@@ -1,4 +1,4 @@
 node_modules
-dist
+types
 .ghtoken
 yarn-error.log
