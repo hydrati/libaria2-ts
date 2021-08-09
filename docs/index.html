@@ -153,21 +153,13 @@
 <span style="color: #008000"> * Array&lt;Promise&lt;...&gt;&gt;</span>
 <span style="color: #008000"> */</span>
 
-<span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">event</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">when</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.onDownloadStart&#039;</span><span style="color: #000000">);</span>
-<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Download </span><span style="color: #0000FF">${</span><span style="color: #001080">event</span><span style="color: #000000FF">.</span><span style="color: #001080">gid</span><span style="color: #0000FF">}</span><span style="color: #A31515"> Started`</span><span style="color: #000000">);</span>
-
 <span style="color: #008000">// or:</span>
-<span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">when</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.onDownloadStart&#039;</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">event</span><span style="color: #000000">: </span><span style="color: #267F99">IAria2NotificationEvent</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Download </span><span style="color: #0000FF">${</span><span style="color: #001080">event</span><span style="color: #000000FF">.</span><span style="color: #001080">gid</span><span style="color: #0000FF">}</span><span style="color: #A31515"> Started`</span><span style="color: #000000">);</span>
-<span style="color: #000000">})</span>
-
-<span style="color: #008000">// or:</span>
-<span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">addEventListener</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.onDownloadStart&#039;</span><span style="color: #000000">, (</span><span style="color: #001080">event</span><span style="color: #000000">: </span><span style="color: #267F99">IAria2NotificationEvent</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">on</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;aria2.onDownloadStart&#039;</span><span style="color: #000000">, (</span><span style="color: #001080">event</span><span style="color: #000000">: </span><span style="color: #267F99">IAria2NotificationEvent</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
 <span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Download </span><span style="color: #0000FF">${</span><span style="color: #001080">event</span><span style="color: #000000FF">.</span><span style="color: #001080">gid</span><span style="color: #0000FF">}</span><span style="color: #A31515"> Started`</span><span style="color: #000000">);</span>
 <span style="color: #000000">});</span>
 
 <span style="color: #008000">// or:</span>
-<span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">onDownloadStart</span><span style="color: #000000">().</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">event</span><span style="color: #000000">: </span><span style="color: #267F99">IAria2NotificationEvent</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">onceDownloadStart</span><span style="color: #000000">().</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">event</span><span style="color: #000000">: </span><span style="color: #267F99">IAria2NotificationEvent</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
 <span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Download </span><span style="color: #0000FF">${</span><span style="color: #001080">event</span><span style="color: #000000FF">.</span><span style="color: #001080">gid</span><span style="color: #0000FF">}</span><span style="color: #A31515"> Started`</span><span style="color: #000000">);</span>
 <span style="color: #000000">}));</span>
 
@@ -176,7 +168,7 @@
 <span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">aria2</span><span style="color: #000000">.</span><span style="color: #795E26">closeConnection</span><span style="color: #000000">();</span>
 
 </code></pre>
-				<p>More methods, see <a href="https://im-oxygen.github.io/libaria2-ts/classes/adapter.aria2clientbaseclass.html">Aria2ClientBaseClient</a></p>
+				<p>More methods, see <a href="https://hyroge.github.io/libaria2-ts/classes/adapter.aria2clientbaseclass.html">Aria2ClientBaseClient</a></p>
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h2>License</h2>
 				</a>
