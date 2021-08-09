@@ -166,7 +166,7 @@ export namespace RpcWebSocket {
     }
 
     /** @ignore */
-    protected $errorHandle(e: Error) {}
+    protected $errorHandle<T>(e: T) {}
 
     /**
      * ## Wait WebSocket Open
