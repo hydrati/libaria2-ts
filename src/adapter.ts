@@ -1,6 +1,5 @@
 import type WebSocket from "ws";
-import type EventEmitter from "events";
-import When from "./when";
+import { EventEmitter } from "events";
 import {
   intoIAria2DownloadStatus,
   intoIAria2FileStatus,
@@ -12,7 +11,7 @@ import {
 } from "./parser";
 import { AxiosRequestConfig } from "axios";
 
-export abstract class Aria2ClientBaseClass<T> extends When {
+export abstract class Aria2ClientBaseClass<T> extends EventEmitter {
   /**
    * @constructor
    * @param options Options for creating a client.
@@ -646,47 +645,47 @@ export abstract class Aria2ClientBaseClass<T> extends When {
   /**
    * When `aria2.onDownloadStart` return.
    */
-  public onDownloadStart(): Promise<IAria2NotificationEvent> {
+  public onceDownloadStart(): Promise<IAria2NotificationEvent> {
     return new Promise((r) =>
-      this.addEventListener("aria2.onDownloadStart", r)
+      this.once("aria2.onDownloadStart", r)
     );
   }
   /**
    * When `aria2.onDownloadPause` return.
    */
-  public onDownloadPause(): Promise<IAria2NotificationEvent> {
+  public onceDownloadPause(): Promise<IAria2NotificationEvent> {
     return new Promise((r) =>
-      this.addEventListener("aria2.onDownloadPause", r)
+      this.once("aria2.onDownloadPause", r)
     );
   }
   /**
    * When `aria2.onDownloadStop` return.
    */
-  public onDownloadStop(): Promise<IAria2NotificationEvent> {
-    return new Promise((r) => this.addEventListener("aria2.onDownloadStop", r));
+  public onceDownloadStop(): Promise<IAria2NotificationEvent> {
+    return new Promise((r) => this.once("aria2.onDownloadStop", r));
   }
   /**
    * When `aria2.onDownloadComplete` return.
    */
-  public onDownloadComplete(): Promise<IAria2NotificationEvent> {
+  public onceDownloadComplete(): Promise<IAria2NotificationEvent> {
     return new Promise((r) =>
-      this.addEventListener("aria2.onDownloadComplete", r)
+      this.once("aria2.onDownloadComplete", r)
     );
   }
   /**
    * When `aria2.onDownloadError` return.
    */
-  public onDownloadError(): Promise<IAria2NotificationEvent> {
+  public onceDownloadError(): Promise<IAria2NotificationEvent> {
     return new Promise((r) =>
-      this.addEventListener("aria2.onDownloadError", r)
+      this.once("aria2.onDownloadError", r)
     );
   }
   /**
    * When `aria2.onBtDownloadStart` return.
    */
-  public onBtDownloadStart(): Promise<IAria2NotificationEvent> {
+  public onceBtDownloadStart(): Promise<IAria2NotificationEvent> {
     return new Promise((r) =>
-      this.addEventListener("aria2.onBtDownloadStart", r)
+      this.once("aria2.onBtDownloadStart", r)
     );
   }
 }
