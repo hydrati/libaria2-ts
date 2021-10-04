@@ -39,18 +39,18 @@ export namespace RpcWebSocket {
    *    * `aria2.onBtDownloadComplete`;
    */
   export class Client extends Aria2ClientBaseClass<IAria2WSClientOptions> {
-    /** @ignore */
+    /** @ignore  @internal */
     protected $ws: WebSocket;
-    /** @ignore */
+    /** @ignore  @internal */
     protected $options!: IAria2ClientOptions & IAria2WSClientOptions;
-    /** @ignore */
+    /** @ignore  @internal */
     protected $respCallbacks = new Map<
       string | number | undefined,
       (data: any) => void
     >();
-    /** @ignore */
+    /** @ignore  @internal */
     protected $openCallbacks: Array<() => void> = [];
-    /** @ignore */
+    /** @ignore  @internal */
     protected $opened = false;
 
     constructor(
@@ -165,12 +165,12 @@ export namespace RpcWebSocket {
       };
     }
 
-    /** @ignore */
+    /** @ignore  @internal */
     protected $errorHandle<T>(e: T) {}
 
     /**
      * ## Wait WebSocket Open
-     * @ignore
+     * @ignore  @internal
      * @returns Promise<void>
      */
 
@@ -187,7 +187,7 @@ export namespace RpcWebSocket {
 
     /**
      * ## Send raw data
-     * @ignore
+     * @ignore  @internal
      * @param data Data to be sent
      */
     protected $sendRaw = (data: any) =>
@@ -199,7 +199,7 @@ export namespace RpcWebSocket {
         }
       });
 
-    /** @ignore */
+    /** @ignore  @internal */
     protected $sendJson = (method: string, ...params: any[]) =>
       new Promise<IJsonRPCResponse>(async (r, j) => {
         await this.$waitOpened();
@@ -220,7 +220,7 @@ export namespace RpcWebSocket {
         this.$sendRaw(JSON.stringify(msg)).catch(j);
       });
 
-    /** @ignore */
+    /** @ignore  @internal */
     protected $systemMethods = new SystemMethods(this);
 
     public get system(): SystemMethods {
@@ -324,9 +324,9 @@ export namespace RpcHttp {
    *    **Events is not supported**
    */
   export class Client extends Aria2ClientBaseClass<IAria2HttpClientOptions> {
-    /** @ignore */
+    /** @ignore  @internal */
     protected $options: IAria2ClientOptions & IAria2HttpClientOptions;
-    /** @ignore */
+    /** @ignore  @internal */
     protected $system: SystemMethods;
 
     constructor(

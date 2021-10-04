@@ -1,6 +1,6 @@
 {
     "name": "libaria2-ts",
-    "version": "1.0.81",
+    "version": "1.0.82",
     "description": "A full-typing wrapper around `aria2`, `The next generation download utility`.",
     "repository": "https://github.com/hyroge/libaria2-ts",
     "homepage": "https://hyroge.github.io/libaria2-ts/",
@@ -25,12 +25,12 @@
                 "require": "./dist/libaria2.node.cjs.js"
             },
             "default": "./dist/libaria2.browser.esm.js"
-        }
+        },
+        "./*": "./*"
     },
     "scripts": {
         "build:docs": "typedoc --tsconfig ./tsconfig.json ./src/lib.ts",
         "build:dts": "api-extractor run",
-        "build:prod": "rollup -c ./rollup.prod.config.js --sourcemap",
         "build": "rollup -c ./rollup.config.js --sourcemap",
         "test": "ts-node ./tests/index.ts",
         "lint": "eslint -c ./.eslintrc"
@@ -47,12 +47,12 @@
         "@rollup/plugin-node-resolve": "^11.2.0",
         "@rollup/pluginutils": "^4.1.0",
         "@types/events": "^3.0.0",
-        "@types/ws": "^7.4.0",
         "@types/node": "^16.4.13",
         "@types/uuid": "^8.3.0",
-        "axios": "^0.21.1",
+        "@types/ws": "^7.4.0",
         "@typescript-eslint/eslint-plugin": "^4.15.2",
         "@typescript-eslint/parser": "^4.15.2",
+        "axios": "^0.22.0",
         "eslint": "7.12.1",
         "eslint-config-standard": "^16.0.2",
         "eslint-plugin-import": "2.22.1",
@@ -60,20 +60,20 @@
         "eslint-plugin-promise": "4.2.1",
         "events": "^3.3.0",
         "isomorphic-ws": "^4.0.1",
-        "rollup": "^2.40.0",
+        "rollup": "^2.58.0",
         "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-typescript2": "^0.30.0",
-        "typedoc": "^0.21.5",
+        "typedoc": "^0.22.5",
         "typescript": "^4.3.5",
         "uuid": "^8.3.2"
     },
     "peerDependencies": {
         "@types/events": "^3.0.0",
-        "@types/ws": "^7.4.0",
         "@types/node": "^16.4.13",
+        "@types/ws": "^7.4.0",
         "axios": "^0.21.1"
     },
     "dependencies": {
-        "ws": "^8.0.0"
+        "ws": "^8.2.3"
     }
 }
