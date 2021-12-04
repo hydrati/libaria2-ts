@@ -1,3 +1,4 @@
 node_modules
 yarn.*
 package.json
+*.exe

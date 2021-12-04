@@ -10,6 +10,8 @@ import {
   intoIAria2GlobalStat,
 } from "./parser";
 import { AxiosRequestConfig } from "axios";
+import { isNode } from "./utils";
+import { publicEncrypt } from "crypto";
 
 export abstract class Aria2ClientBaseClass<T> extends EventEmitter {
   /**
@@ -18,6 +20,7 @@ export abstract class Aria2ClientBaseClass<T> extends EventEmitter {
    */
   constructor() {
     super();
+
   }
   /**
    * ## Aria2 SystemMethods
@@ -40,7 +43,7 @@ export abstract class Aria2ClientBaseClass<T> extends EventEmitter {
     options?: IAria2ClientOptions,
     position?: number
   ): Promise<TAria2ClientGID[]> {
-    if (process.versions.node ?? false) {
+    if (isNode()) {
       if (metalink instanceof Buffer) metalink = metalink.toString("base64");
     }
     let args: unknown[] = [metalink];
@@ -642,52 +645,44 @@ export abstract class Aria2ClientBaseClass<T> extends EventEmitter {
   public abstract getCreateOptions(): Promise<
     Readonly<IAria2ClientOptions & T>
   >;
-  /**
-   * When `aria2.onDownloadStart` return.
-   */
-  public onceDownloadStart(): Promise<IAria2NotificationEvent> {
-    return new Promise((r) =>
-      this.once("aria2.onDownloadStart", r)
-    );
+
+
+  public addListener(event: "aria2.onDownloadStart", listener: (ev: IAria2NotificationEvent) => any): this
+  public addListener(event: "aria2.onDownloadPause", listener: (ev: IAria2NotificationEvent) => any): this
+  public addListener(event: "aria2.onDownloadStop", listener: (ev: IAria2NotificationEvent) => any): this
+  public addListener(event: "aria2.onDownloadComplete", listener: (ev: IAria2NotificationEvent) => any): this
+  public addListener(event: "aria2.onDownloadError", listener: (ev: IAria2NotificationEvent) => any): this
+  public addListener(event: "aria2.onBtDownloadComplete", listener: (ev: IAria2NotificationEvent) => any): this
+  public addListener(event: string, listener: (...args: any[]) => any): this
+  public addListener(event: string, listener: (...args: any[]) => any): this {
+    super.on(event, listener)
+    return this
   }
-  /**
-   * When `aria2.onDownloadPause` return.
-   */
-  public onceDownloadPause(): Promise<IAria2NotificationEvent> {
-    return new Promise((r) =>
-      this.once("aria2.onDownloadPause", r)
-    );
+  
+  public on(event: "aria2.onDownloadStart", listener: (ev: IAria2NotificationEvent) => any): this
+  public on(event: "aria2.onDownloadPause", listener: (ev: IAria2NotificationEvent) => any): this
+  public on(event: "aria2.onDownloadStop", listener: (ev: IAria2NotificationEvent) => any): this
+  public on(event: "aria2.onDownloadComplete", listener: (ev: IAria2NotificationEvent) => any): this
+  public on(event: "aria2.onDownloadError", listener: (ev: IAria2NotificationEvent) => any): this
+  public on(event: "aria2.onBtDownloadComplete", listener: (ev: IAria2NotificationEvent) => any): this
+  public on(event: string, listener: (...args: any[]) => any): this
+  public on(event: string, listener: (...args: any[]) => any): this {
+    super.on(event, listener)
+    return this
   }
-  /**
-   * When `aria2.onDownloadStop` return.
-   */
-  public onceDownloadStop(): Promise<IAria2NotificationEvent> {
-    return new Promise((r) => this.once("aria2.onDownloadStop", r));
+
+  public once(event: "aria2.onDownloadStart", listener: (ev: IAria2NotificationEvent) => any): this
+  public once(event: "aria2.onDownloadPause", listener: (ev: IAria2NotificationEvent) => any): this
+  public once(event: "aria2.onDownloadStop", listener: (ev: IAria2NotificationEvent) => any): this
+  public once(event: "aria2.onDownloadComplete", listener: (ev: IAria2NotificationEvent) => any): this
+  public once(event: "aria2.onDownloadError", listener: (ev: IAria2NotificationEvent) => any): this
+  public once(event: "aria2.onBtDownloadComplete", listener: (ev: IAria2NotificationEvent) => any): this
+  public once(event: string, listener: (...args: any[]) => any): this
+  public once(event: string, listener: (...args: any[]) => any): this {
+    super.once(event, listener)
+    return this
   }
-  /**
-   * When `aria2.onDownloadComplete` return.
-   */
-  public onceDownloadComplete(): Promise<IAria2NotificationEvent> {
-    return new Promise((r) =>
-      this.once("aria2.onDownloadComplete", r)
-    );
-  }
-  /**
-   * When `aria2.onDownloadError` return.
-   */
-  public onceDownloadError(): Promise<IAria2NotificationEvent> {
-    return new Promise((r) =>
-      this.once("aria2.onDownloadError", r)
-    );
-  }
-  /**
-   * When `aria2.onBtDownloadStart` return.
-   */
-  public onceBtDownloadStart(): Promise<IAria2NotificationEvent> {
-    return new Promise((r) =>
-      this.once("aria2.onBtDownloadStart", r)
-    );
-  }
+
 }
 
 export type TAria2RemoveDownloadResult = string;
@@ -696,9 +691,9 @@ export type TAria2PurgeDownloadResult = string;
 
 export interface IAria2GlobalStat {
   /** Overall download speed (byte/sec). */
-  downloadSpeed: BigInt;
+  downloadSpeed: bigint;
   /** Overall upload speed(byte/sec). */
-  uploadSpeed: BigInt;
+  uploadSpeed: bigint;
   /** The number of active downloads. */
   numActive: number;
   /** The number of waiting downloads. */
@@ -733,7 +728,7 @@ export interface IAria2ServerInfo {
   /** This is the URI currently used for downloading. If redirection is involved, currentUri and uri may differ. */
   currentUri: string;
   /** Download speed (byte/sec) */
-  downloadSpeed: BigInt;
+  downloadSpeed: bigint;
 }
 
 export interface IAria2ServersInfoItem {
@@ -760,7 +755,7 @@ export interface IAria2PeersInfo {
   /** Hexadecimal representation of the download progress of the peer. The highest bit corresponds to the piece at index 0. Set bits indicate the piece is available and unset bits indicate the piece is missing. Any spare bits at the end are set to zero. */
   bitfield: string | string[];
   /** Download speed (byte/sec) that this client obtains from the peer. */
-  downloadSpeed: BigInt;
+  downloadSpeed: bigint;
   /** IP address of the peer. */
   ip: string;
   /** `true` if the peer is choking aria2. Otherwise `false`. */
@@ -772,7 +767,7 @@ export interface IAria2PeersInfo {
   /** `true` if this peer is a seeder. Otherwise `false`. */
   seeder: boolean;
   /** Upload speed(byte/sec) that this client uploads to the peer. */
-  uploadSpeed: BigInt;
+  uploadSpeed: bigint;
 }
 
 export interface IAria2DownloadStatus {
@@ -781,29 +776,29 @@ export interface IAria2DownloadStatus {
   /** `active` for currently downloading/seeding downloads. `waiting` for downloads in the queue; download is not started. paused for `paused` downloads. `error` for downloads that were stopped because of error. `complete` for stopped and completed downloads. `removed` for the downloads removed by user. */
   status: EAria2DownloadState;
   /** Total length of the download in bytes. */
-  totalLength: BigInt;
+  totalLength: bigint;
   /** Completed length of the download in bytes. */
-  completedLength: BigInt;
+  completedLength: bigint;
   /** Uploaded length of the download in bytes. */
-  uploadLength: BigInt;
+  uploadLength: bigint;
   /** Hexadecimal representation of the download progress. The highest bit corresponds to the piece at index 0. Any set bits indicate loaded pieces, while unset bits indicate not yet loaded and/or missing pieces. Any overflow bits at the end are set to zero. When the download was not started yet, this key will not be included in the response. */
   bitfield: string | string[];
   /** Download speed of this download measured in bytes/sec. */
-  downloadSpeed: BigInt;
+  downloadSpeed: bigint;
   /** Upload speed of this download measured in bytes/sec. */
-  uploadSpeed: BigInt;
+  uploadSpeed: bigint;
   /** InfoHash. BitTorrent only. */
   infoHash?: string;
   /** The number of seeders aria2 has connected to. BitTorrent only. */
-  numSeeders?: BigInt;
+  numSeeders?: bigint;
   /** `true` if the local endpoint is a seeder. Otherwise `false`. BitTorrent only. */
   seeder?: boolean;
   /** Piece length in bytes. */
-  pieceLength: BigInt;
+  pieceLength: bigint;
   /** The number of pieces. */
-  numPieces: BigInt;
+  numPieces: bigint;
   /** The number of peers/servers aria2 has connected to */
-  connections: BigInt;
+  connections: bigint;
   /** The code of the last error for this item, if any. The value is a string. The error codes are defined in the [EXIT STATUS](https://aria2.github.io/manual/en/html/aria2c.html#id1) section. This value is only available for stopped/completed downloads. */
   errorCode?: number;
   /** The (hopefully) human readable error message associated to `errorCode`. */
@@ -828,7 +823,7 @@ export interface IAria2DownloadBitTorrentStatus {
   /** The comment of the torrent. `comment.utf-8` is used if available. */
   comment?: string;
   /** The creation time of the torrent. The value is an integer since the epoch, measured in seconds. */
-  creationDate?: BigInt;
+  creationDate?: bigint;
   /** File mode of the torrent. The value is either `single` or `multi`. */
   mode: EAria2DownloadBitTorrentMode;
   /** Struct which contains data from Info dictionary. */
@@ -846,9 +841,9 @@ export interface IAria2FileStatus {
   /** File path. */
   path: string;
   /** File size in bytes. */
-  length: BigInt;
+  length: bigint;
   /** Completed length of this file in bytes. Please note that it is possible that sum of `completedLength` is less than the `completedLength` returned by the `aria2.tellStatus()` method. This is because completedLength in `aria2.getFiles()` only includes completed pieces. On the other hand, completedLength in `aria2.tellStatus()` also includes partially completed pieces. */
-  completedLength: BigInt;
+  completedLength: bigint;
   /** `true` if this file is selected by `--select-file` option. If `--select-file` is not specified or this is single-file torrent or not a torrent download at all, this value is always `true`. Otherwise `false`. */
   selected: boolean;
   /** Returns a list of URIs for this file. The element type is the same struct used in the `aria2.getUris()` method. */
@@ -915,10 +910,10 @@ export interface IAria2ClientOptions {
 
 export abstract class Aria2ClientSystemMethodsBaseClass<T> {
   /** @ignore */
-  protected $client: Aria2ClientBaseClass<T>;
+  protected _client: Aria2ClientBaseClass<T>;
   /** @ignore */
   constructor(client: Aria2ClientBaseClass<T>) {
-    this.$client = client;
+    this._client = client;
   }
   /**
    * This methods encapsulates multiple method calls in a single request. methods is an array of structs. The structs contain two keys: `methodName` and `params`. `methodName` is the method name to call and `params` is array containing parameters to the method call. This method returns an array of responses. The elements will be either a one-item array containing the return value of the method call or a struct of fault element if an encapsulated method call fails.

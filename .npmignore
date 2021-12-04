@@ -7,3 +7,4 @@ temp
 tests
 rollup*
 api-extractor*
+dist/*.ts
