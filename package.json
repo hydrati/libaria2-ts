@@ -1,6 +1,6 @@
 {
     "name": "libaria2-ts",
-    "version": "1.0.9",
+    "version": "1.0.91",
     "description": "A full-typing wrapper around `aria2`, `The next generation download utility`.",
     "repository": "https://github.com/hyroge/libaria2-ts",
     "homepage": "https://hyroge.github.io/libaria2-ts/",
@@ -66,12 +66,6 @@
         "typedoc": "^0.22.5",
         "typescript": "^4.3.5",
         "uuid": "^8.3.2"
-    },
-    "peerDependencies": {
-        "@types/events": "^3.0.0",
-        "@types/node": "^16.4.13",
-        "@types/ws": "^7.4.0",
-        "axios": "^0.21.1"
     },
     "dependencies": {
         "ws": "^8.2.3"
