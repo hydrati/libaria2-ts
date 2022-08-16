@@ -105,7 +105,7 @@ await aria2.closeConnection();
 
 ```
 
-More methods, see [Aria2ClientBaseClient](https://hyroge.github.io/libaria2-ts/classes/adapter.aria2clientbaseclass.html)
+More methods, see [Aria2ClientBaseClient](https://hydrati.github.io/libaria2-ts/classes/adapter.aria2clientbaseclass.html)
 
 ## License
 ```
